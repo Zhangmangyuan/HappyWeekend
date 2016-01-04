@@ -18,6 +18,8 @@
 		EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688601C3A505C00E33E17 /* Main.storyboard */; };
 		EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688621C3A506A00E33E17 /* Discover.storyboard */; };
 		EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688641C3A507D00E33E17 /* Mine.storyboard */; };
+		EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688671C3A766900E33E17 /* MainTableViewCell.m */; };
+		EAB6886A1C3A766900E33E17 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB688681C3A766900E33E17 /* MainTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		EAB688601C3A505C00E33E17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAB688621C3A506A00E33E17 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		EAB688641C3A507D00E33E17 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		EAB688661C3A766900E33E17 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		EAB688671C3A766900E33E17 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		EAB688681C3A766900E33E17 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				EAB688601C3A505C00E33E17 /* Main.storyboard */,
+				EAB688661C3A766900E33E17 /* MainTableViewCell.h */,
+				EAB688671C3A766900E33E17 /* MainTableViewCell.m */,
+				EAB688681C3A766900E33E17 /* MainTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB6886A1C3A766900E33E17 /* MainTableViewCell.xib in Resources */,
 				EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */,
 				EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */,
 				EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */,
@@ -362,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */,
 				EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */,
 				EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */,
 				EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */,

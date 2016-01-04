@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D79ECE3F61CAE0DCD6B27B42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752563C37DE3A0DC3CD5EBDC /* libPods.a */; };
 		EAB688301C3A1C3B00E33E17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6882F1C3A1C3B00E33E17 /* main.m */; };
 		EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688321C3A1C3B00E33E17 /* AppDelegate.m */; };
 		EAB688351C3A1C3B00E33E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB688341C3A1C3B00E33E17 /* Assets.xcassets */; };
 		EAB688381C3A1C3B00E33E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688361C3A1C3B00E33E17 /* LaunchScreen.storyboard */; };
+		EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6884C1C3A4E2A00E33E17 /* DiscoverViewController.m */; };
+		EAB6885C1C3A4E2A00E33E17 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688521C3A4E2A00E33E17 /* MainViewController.m */; };
+		EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688581C3A4E2A00E33E17 /* MineViewController.m */; };
+		EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688601C3A505C00E33E17 /* Main.storyboard */; };
+		EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688621C3A506A00E33E17 /* Discover.storyboard */; };
+		EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688641C3A507D00E33E17 /* Mine.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55ED2CD6D3821FA44030050D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		752563C37DE3A0DC3CD5EBDC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		773E4555705A154D421C4E83 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EAB6882B1C3A1C3B00E33E17 /* HappyWeekend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyWeekend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6882F1C3A1C3B00E33E17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAB688311C3A1C3B00E33E17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -21,6 +31,15 @@
 		EAB688341C3A1C3B00E33E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB688371C3A1C3B00E33E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAB688391C3A1C3B00E33E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAB6884B1C3A4E2A00E33E17 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		EAB6884C1C3A4E2A00E33E17 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		EAB688511C3A4E2A00E33E17 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EAB688521C3A4E2A00E33E17 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EAB688571C3A4E2A00E33E17 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		EAB688581C3A4E2A00E33E17 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		EAB688601C3A505C00E33E17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EAB688621C3A506A00E33E17 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		EAB688641C3A507D00E33E17 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79ECE3F61CAE0DCD6B27B42 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0046B1DE4855A7CC871C4B72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				752563C37DE3A0DC3CD5EBDC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD037AC996940F69145DA5F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				773E4555705A154D421C4E83 /* Pods.debug.xcconfig */,
+				55ED2CD6D3821FA44030050D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EAB688221C3A1C3A00E33E17 = {
 			isa = PBXGroup;
 			children = (
 				EAB6882D1C3A1C3B00E33E17 /* HappyWeekend */,
 				EAB6882C1C3A1C3B00E33E17 /* Products */,
+				DD037AC996940F69145DA5F7 /* Pods */,
+				0046B1DE4855A7CC871C4B72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +92,9 @@
 		EAB6882D1C3A1C3B00E33E17 /* HappyWeekend */ = {
 			isa = PBXGroup;
 			children = (
+				EAB688481C3A4E2A00E33E17 /* Classes */,
+				EAB6885E1C3A4E3400E33E17 /* Library */,
+				EAB6885F1C3A4FC100E33E17 /* Resources */,
 				EAB688311C3A1C3B00E33E17 /* AppDelegate.h */,
 				EAB688321C3A1C3B00E33E17 /* AppDelegate.m */,
 				EAB688341C3A1C3B00E33E17 /* Assets.xcassets */,
@@ -71,6 +113,132 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EAB688481C3A4E2A00E33E17 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6884F1C3A4E2A00E33E17 /* Main */,
+				EAB688491C3A4E2A00E33E17 /* Discover */,
+				EAB688551C3A4E2A00E33E17 /* Mine */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EAB688491C3A4E2A00E33E17 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6884A1C3A4E2A00E33E17 /* Controllers */,
+				EAB6884D1C3A4E2A00E33E17 /* Models */,
+				EAB6884E1C3A4E2A00E33E17 /* Views */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		EAB6884A1C3A4E2A00E33E17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6884B1C3A4E2A00E33E17 /* DiscoverViewController.h */,
+				EAB6884C1C3A4E2A00E33E17 /* DiscoverViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAB6884D1C3A4E2A00E33E17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAB6884E1C3A4E2A00E33E17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688621C3A506A00E33E17 /* Discover.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EAB6884F1C3A4E2A00E33E17 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688501C3A4E2A00E33E17 /* Controllers */,
+				EAB688531C3A4E2A00E33E17 /* Models */,
+				EAB688541C3A4E2A00E33E17 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EAB688501C3A4E2A00E33E17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688511C3A4E2A00E33E17 /* MainViewController.h */,
+				EAB688521C3A4E2A00E33E17 /* MainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAB688531C3A4E2A00E33E17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAB688541C3A4E2A00E33E17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688601C3A505C00E33E17 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EAB688551C3A4E2A00E33E17 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688561C3A4E2A00E33E17 /* Controllers */,
+				EAB688591C3A4E2A00E33E17 /* Models */,
+				EAB6885A1C3A4E2A00E33E17 /* Views */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		EAB688561C3A4E2A00E33E17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688571C3A4E2A00E33E17 /* MineViewController.h */,
+				EAB688581C3A4E2A00E33E17 /* MineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAB688591C3A4E2A00E33E17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAB6885A1C3A4E2A00E33E17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAB688641C3A507D00E33E17 /* Mine.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EAB6885E1C3A4E3400E33E17 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		EAB6885F1C3A4FC100E33E17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB6883C1C3A1C3B00E33E17 /* Build configuration list for PBXNativeTarget "HappyWeekend" */;
 			buildPhases = (
+				EDE377DD6E8DEE4E59B5A98A /* Check Pods Manifest.lock */,
 				EAB688271C3A1C3B00E33E17 /* Sources */,
 				EAB688281C3A1C3B00E33E17 /* Frameworks */,
 				EAB688291C3A1C3B00E33E17 /* Resources */,
+				F6A988E5B15471C325CA7E5E /* Embed Pods Frameworks */,
+				8DF2FC49F74C3F27BF1FF805 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +299,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */,
+				EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */,
+				EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */,
 				EAB688351C3A1C3B00E33E17 /* Assets.xcassets in Resources */,
 				EAB688381C3A1C3B00E33E17 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -135,13 +309,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DF2FC49F74C3F27BF1FF805 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE377DD6E8DEE4E59B5A98A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A988E5B15471C325CA7E5E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAB688271C3A1C3B00E33E17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */,
+				EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */,
+				EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */,
 				EAB688301C3A1C3B00E33E17 /* main.m in Sources */,
+				EAB6885C1C3A4E2A00E33E17 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +466,7 @@
 		};
 		EAB6883D1C3A1C3B00E33E17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773E4555705A154D421C4E83 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
@@ -252,6 +478,7 @@
 		};
 		EAB6883E1C3A1C3B00E33E17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55ED2CD6D3821FA44030050D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
@@ -280,6 +507,7 @@
 				EAB6883E1C3A1C3B00E33E17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

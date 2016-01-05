@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainTableViewCell ()
 
@@ -25,6 +26,13 @@
 - (void)awakeFromNib {
     // Initialization code
     
+}
+//在model的set方法中赋值
+- (void)setMainModel:(MainModel *)mainModel {
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.image_big]  placeholderImage:nil];
+    
+    self.activityNameLabel.text = mainModel.title;
+    self.activityPriceLabel.text = mainModel.price;    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

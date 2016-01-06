@@ -30,9 +30,14 @@
 //在model的set方法中赋值
 - (void)setMainModel:(MainModel *)mainModel {
     [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.image_big]  placeholderImage:nil];
-    
     self.activityNameLabel.text = mainModel.title;
-    self.activityPriceLabel.text = mainModel.price;    
+    self.activityPriceLabel.text = mainModel.price;
+    
+    if ([mainModel.type integerValue] != RecommendTypeActivity) {
+        self.activityDistanceBtn.hidden = YES;
+    } else {
+        self.activityDistanceBtn.hidden = NO;
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -1,0 +1,39 @@
+//
+//  HappyWeekend.pch
+//  HappyWeekend
+//
+//  Created by 张茫原 on 16/1/6.
+//  Copyright © 2016年 芒果科技. All rights reserved.
+//
+
+#ifndef HappyWeekend_pch
+#define HappyWeekend_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "HWDefine.h"
+#import "UIViewController+Common.h"
+
+//屏幕宽高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#ifdef DEBUG
+#	define ZMYLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#	define ZMYLog(...)
+#endif
+
+#endif /* HappyWeekend_pch */
+
+
+
+
+
+
+
+
+
+
+

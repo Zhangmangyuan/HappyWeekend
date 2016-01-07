@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 typedef enum {
     RecommendTypeActivity = 1,      //推荐活动

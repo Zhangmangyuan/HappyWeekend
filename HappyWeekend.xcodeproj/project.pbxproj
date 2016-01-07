@@ -28,8 +28,11 @@
 		EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688641C3A507D00E33E17 /* Mine.storyboard */; };
 		EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688671C3A766900E33E17 /* MainTableViewCell.m */; };
 		EAB6886A1C3A766900E33E17 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB688681C3A766900E33E17 /* MainTableViewCell.xib */; };
+		EAD0A7381C3E4C2600E28F10 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD0A7371C3E4C2600E28F10 /* HWTools.m */; };
+		EAD0A73B1C3E5B0200E28F10 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD0A73A1C3E5B0200E28F10 /* UIView+Extension.m */; };
 		EAD6B8CA1C3B9D480084C6D7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = EAD6B8C91C3B9D470084C6D7 /* File */; };
 		EAD6B8CD1C3BA05A0084C6D7 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD6B8CC1C3BA05A0084C6D7 /* MainModel.m */; };
+		EAEAA2151C3E10D5002BE420 /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEAA2141C3E10D5002BE420 /* ActivityDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,9 +76,15 @@
 		EAB688661C3A766900E33E17 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		EAB688671C3A766900E33E17 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		EAB688681C3A766900E33E17 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		EAD0A7361C3E4C2600E28F10 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
+		EAD0A7371C3E4C2600E28F10 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTools.m; sourceTree = "<group>"; };
+		EAD0A7391C3E5B0200E28F10 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EAD0A73A1C3E5B0200E28F10 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		EAD6B8C91C3B9D470084C6D7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		EAD6B8CB1C3BA05A0084C6D7 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		EAD6B8CC1C3BA05A0084C6D7 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		EAEAA2131C3E10D5002BE420 /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
+		EAEAA2141C3E10D5002BE420 /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,10 @@
 				EA27C90E1C3CB30600895FC8 /* HWDefine.h */,
 				EA27C9241C3D201500895FC8 /* UIViewController+Common.h */,
 				EA27C9251C3D201500895FC8 /* UIViewController+Common.m */,
+				EAD0A7361C3E4C2600E28F10 /* HWTools.h */,
+				EAD0A7371C3E4C2600E28F10 /* HWTools.m */,
+				EAD0A7391C3E5B0200E28F10 /* UIView+Extension.h */,
+				EAD0A73A1C3E5B0200E28F10 /* UIView+Extension.m */,
 			);
 			path = HWTools;
 			sourceTree = "<group>";
@@ -254,6 +267,8 @@
 				EAB688661C3A766900E33E17 /* MainTableViewCell.h */,
 				EAB688671C3A766900E33E17 /* MainTableViewCell.m */,
 				EAB688681C3A766900E33E17 /* MainTableViewCell.xib */,
+				EAEAA2131C3E10D5002BE420 /* ActivityDetailView.h */,
+				EAEAA2141C3E10D5002BE420 /* ActivityDetailView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +356,7 @@
 				TargetAttributes = {
 					EAB6882A1C3A1C3B00E33E17 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YEJ7XVNCC4;
 					};
 				};
 			};
@@ -432,6 +448,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD0A73B1C3E5B0200E28F10 /* UIView+Extension.m in Sources */,
+				EAD0A7381C3E4C2600E28F10 /* HWTools.m in Sources */,
 				EA27C91D1C3CBFE100895FC8 /* ClassifyViewController.m in Sources */,
 				EA27C9231C3CC06400895FC8 /* HotActivityViewController.m in Sources */,
 				EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */,
@@ -442,6 +460,7 @@
 				EA27C9171C3CBE6700895FC8 /* ActivityDetailViewController.m in Sources */,
 				EA27C9141C3CBDA100895FC8 /* SearchViewController.m in Sources */,
 				EA27C91A1C3CBF3B00895FC8 /* ThemeViewController.m in Sources */,
+				EAEAA2151C3E10D5002BE420 /* ActivityDetailView.m in Sources */,
 				EAB688301C3A1C3B00E33E17 /* main.m in Sources */,
 				EA27C9111C3CBC1400895FC8 /* SelectCityViewController.m in Sources */,
 				EAB6885C1C3A4E2A00E33E17 /* MainViewController.m in Sources */,
@@ -549,6 +568,8 @@
 			baseConfigurationReference = 773E4555705A154D421C4E83 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HappyWeekend/Library/HWTools/HappyWeekend.pch";
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
@@ -556,6 +577,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MangoiOS.HappyWeekend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -564,6 +586,8 @@
 			baseConfigurationReference = 55ED2CD6D3821FA44030050D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HappyWeekend/Library/HWTools/HappyWeekend.pch";
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
@@ -571,6 +595,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MangoiOS.HappyWeekend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

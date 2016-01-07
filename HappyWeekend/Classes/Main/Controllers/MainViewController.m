@@ -123,7 +123,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc] init];
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
+        //活动id
+        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
+        activityVC.activityId = mainModel.activityId;
         [self.navigationController pushViewController:activityVC animated:YES];
     } else {
         ThemeViewController *themeVC = [[ThemeViewController alloc] init];
@@ -254,7 +258,8 @@
     //从数组中的字典里取出type类型
     NSString *type = self.adArray[adButton.tag - 100][@"type"];
     if ([type integerValue] == 1) {
-        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc] init];
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
         //活动id
         activityVC.activityId = self.adArray[adButton.tag - 100][@"id"];
         [self.navigationController pushViewController:activityVC animated:YES];

@@ -10,7 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate ()<CLLocationManagerDelegate>
-
+{
+    CLLocationManager *locationManager;
+}
 @end
 
 @implementation AppDelegate
@@ -20,7 +22,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
+    if (![CLLocationManager locationServicesEnabled]) {
+        ZMYLog(@"定位服务当前可能尚未打开，请设置打开！");
+    }
+    
+    //如果没有授权则请求用户授权
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        [locationManager requestWhenInUseAuthorization];
+    }
     
     
     //UITabbarController

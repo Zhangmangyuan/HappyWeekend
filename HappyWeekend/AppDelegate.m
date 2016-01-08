@@ -34,7 +34,7 @@
     
     
     //UITabbarController
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    self.tabBarVC = [[UITabBarController alloc] init];
     
     //创建被tabBarVC管理的视图控制器
     
@@ -65,9 +65,9 @@
     mineNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
 
     //添加被管理的视图控制器
-    tabBarVC.viewControllers = @[mainNav,discoverNav,mineNav];
-    tabBarVC.tabBar.barTintColor = [UIColor whiteColor];
-    self.window.rootViewController = tabBarVC;
+    self.tabBarVC.viewControllers = @[mainNav,discoverNav,mineNav];
+    self.tabBarVC.tabBar.barTintColor = [UIColor whiteColor];
+    self.window.rootViewController = self.tabBarVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

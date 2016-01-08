@@ -69,9 +69,16 @@
     
     [self configTableViewHeaderView];
     //请求网络数据
-    [self requestModel];
+//    [self requestModel];
     //启动定时器
     [self startTimer];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //取消隐藏tabbar
+    self.tabBarController.tabBar.hidden = NO;
+
 }
 
 #pragma mark ------- UITableViewDataSource
@@ -122,15 +129,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
     if (indexPath.section == 0) {
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
         //活动id
-        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
         activityVC.activityId = mainModel.activityId;
+        activityVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:activityVC animated:YES];
     } else {
         ThemeViewController *themeVC = [[ThemeViewController alloc] init];
+        themeVC.themeid = mainModel.activityId;
+        themeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:themeVC animated:YES];
     }
 }
@@ -244,6 +254,7 @@
 //精选活动
 - (void)goodActivityButton {
     GoodActivityViewController *goodVC = [[GoodActivityViewController alloc] init];
+    goodVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:goodVC animated:YES];
 }
 
@@ -262,10 +273,14 @@
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
         //活动id
         activityVC.activityId = self.adArray[adButton.tag - 100][@"id"];
+        activityVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:activityVC animated:YES];
     } else {
-        HotActivityViewController *hotVC = [[HotActivityViewController alloc] init];
-        [self.navigationController pushViewController:hotVC animated:YES];
+        ThemeViewController *themeVC = [[ThemeViewController alloc] init];
+        themeVC.themeid = self.adArray[adButton.tag - 100][@"id"];
+        //隐藏tabbar
+        themeVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:themeVC animated:YES];
     }
 }
 
@@ -282,11 +297,15 @@
 //每2秒执行一次，图片自动轮播
 - (void)rollAnimation {
     //把page当前页加1
-    NSInteger rollPage = (self.pageControl.currentPage + 1) % self.adArray.count;
-    self.pageControl.currentPage = rollPage;
-    //计算出scrollView应该滚动的x轴坐标
-    CGFloat offsetX = self.pageControl.currentPage * kScreenWidth;
-    [self.carouselView setContentOffset:CGPointMake(offsetX, 0)animated:YES];
+    //self.adArray.count数组元素个数可能为0，当对0取余的时候没有意义
+    if (self.adArray.count > 0) {
+        NSInteger rollPage = (self.pageControl.currentPage + 1) % self.adArray.count;
+        self.pageControl.currentPage = rollPage;
+        //计算出scrollView应该滚动的x轴坐标
+        CGFloat offsetX = self.pageControl.currentPage * kScreenWidth;
+        [self.carouselView setContentOffset:CGPointMake(offsetX, 0)animated:YES];
+    }
+    
 }
 
 //当手动去滑动scrollView的时候，定时器依然在计算时间，可能我们刚刚滑动到下一页，定时器时间有刚好触发，导致在当前页停留的时间不够2秒。

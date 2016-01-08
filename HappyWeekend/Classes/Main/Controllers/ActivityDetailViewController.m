@@ -1,7 +1,7 @@
 //
 //  ActivityDetailViewController.m
 //  HappyWeekend
-//
+//  活动详情
 //  Created by 张茫原 on 16/1/6.
 //  Copyright © 2016年 芒果科技. All rights reserved.
 //
@@ -25,7 +25,8 @@
     // Do any additional setup after loading the view.
     self.title = @"活动详情";
     [self showBarkButton];
-    
+//    //隐藏tabbar
+//    self.tabBarController.tabBar.hidden = YES;
     //去地图页面
     [self.activityDetailView.mapButton addTarget:self action:@selector(mapButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 

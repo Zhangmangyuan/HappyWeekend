@@ -20,6 +20,14 @@
     return timeStr;
 }
 
++ (NSDate *)getSystemNowDate {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init ];
+    df.dateFormat = @"yyyy-MM-dd HH:mm";
+    NSString *dateStr = [df stringFromDate:[NSDate date]];
+    NSDate *date = [df dateFromString:dateStr];
+    return date;
+}
+
 #pragma mrak ------  根据文字最大显示宽高和文字内容返回文字高度
 + (CGFloat)getTextHeightWithText:(NSString *)text bigestSize:(CGSize)bigSize textFont:(CGFloat)font{
     

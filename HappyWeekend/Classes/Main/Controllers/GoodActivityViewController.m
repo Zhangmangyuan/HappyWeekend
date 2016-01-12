@@ -107,16 +107,16 @@
         } else {
             
         }
-        
+        //完成加载
+        [self.tableView tableViewDidFinishedLoading];
+        self.tableView.reachedTheEnd = NO;
+        //刷新tableView，他会重新执行tableView的所有代理方法
+        [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZMYLog(@"%@",error);
     }];
     
-    //完成加载
-    [self.tableView tableViewDidFinishedLoading];
-    self.tableView.reachedTheEnd = NO;
-    //刷新tableView，他会重新执行tableView的所有代理方法
-    [self.tableView reloadData];
+    
 }
 
 //手指开始拖动方法

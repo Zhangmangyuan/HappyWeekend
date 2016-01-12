@@ -17,6 +17,12 @@
 		EA27C9201C3CC05800895FC8 /* GoodActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C91F1C3CC05800895FC8 /* GoodActivityViewController.m */; };
 		EA27C9231C3CC06400895FC8 /* HotActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9221C3CC06400895FC8 /* HotActivityViewController.m */; };
 		EA27C9261C3D201500895FC8 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9251C3D201500895FC8 /* UIViewController+Common.m */; };
+		EA3B58571C449EF7003D03C6 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3B58541C449EF7003D03C6 /* ProgressHUD.bundle */; };
+		EA3B58581C449EF7003D03C6 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B58561C449EF7003D03C6 /* ProgressHUD.m */; };
+		EA3B585C1C44FA62003D03C6 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B585A1C44FA62003D03C6 /* DiscoverTableViewCell.m */; };
+		EA3B585D1C44FA62003D03C6 /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3B585B1C44FA62003D03C6 /* DiscoverTableViewCell.xib */; };
+		EA3B58901C4511C3003D03C6 /* Discover.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3B588F1C4511C3003D03C6 /* Discover.plist */; };
+		EA3B58931C45125A003D03C6 /* DiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B58921C45125A003D03C6 /* DiscoverModel.m */; };
 		EA4936081C434F5600D400ED /* HotActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4936071C434F5600D400ED /* HotActivityTableViewCell.m */; };
 		EA49360B1C43512300D400ED /* HotActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49360A1C43512300D400ED /* HotActivityModel.m */; };
 		EA49360D1C43589300D400ED /* HotActivity.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA49360C1C43589300D400ED /* HotActivity.plist */; };
@@ -81,6 +87,15 @@
 		EA27C9221C3CC06400895FC8 /* HotActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityViewController.m; sourceTree = "<group>"; };
 		EA27C9241C3D201500895FC8 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Common.h"; path = "../../Classes/Main/Controllers/UIViewController+Common.h"; sourceTree = "<group>"; };
 		EA27C9251C3D201500895FC8 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Common.m"; path = "../../Classes/Main/Controllers/UIViewController+Common.m"; sourceTree = "<group>"; };
+		EA3B58541C449EF7003D03C6 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		EA3B58551C449EF7003D03C6 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		EA3B58561C449EF7003D03C6 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		EA3B58591C44FA62003D03C6 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
+		EA3B585A1C44FA62003D03C6 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
+		EA3B585B1C44FA62003D03C6 /* DiscoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableViewCell.xib; sourceTree = "<group>"; };
+		EA3B588F1C4511C3003D03C6 /* Discover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Discover.plist; sourceTree = "<group>"; };
+		EA3B58911C45125A003D03C6 /* DiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverModel.h; sourceTree = "<group>"; };
+		EA3B58921C45125A003D03C6 /* DiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverModel.m; sourceTree = "<group>"; };
 		EA4936061C434F5600D400ED /* HotActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActivityTableViewCell.h; sourceTree = "<group>"; };
 		EA4936071C434F5600D400ED /* HotActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityTableViewCell.m; sourceTree = "<group>"; };
 		EA4936091C43512300D400ED /* HotActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActivityModel.h; sourceTree = "<group>"; };
@@ -187,6 +202,16 @@
 			path = HWTools;
 			sourceTree = "<group>";
 		};
+		EA3B58531C449EF7003D03C6 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B58541C449EF7003D03C6 /* ProgressHUD.bundle */,
+				EA3B58551C449EF7003D03C6 /* ProgressHUD.h */,
+				EA3B58561C449EF7003D03C6 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		EA49360E1C43912800D400ED /* VOSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +312,9 @@
 		EAB6884D1C3A4E2A00E33E17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B588F1C4511C3003D03C6 /* Discover.plist */,
+				EA3B58911C45125A003D03C6 /* DiscoverModel.h */,
+				EA3B58921C45125A003D03C6 /* DiscoverModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				EAB688621C3A506A00E33E17 /* Discover.storyboard */,
+				EA3B58591C44FA62003D03C6 /* DiscoverTableViewCell.h */,
+				EA3B585A1C44FA62003D03C6 /* DiscoverTableViewCell.m */,
+				EA3B585B1C44FA62003D03C6 /* DiscoverTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,6 +444,7 @@
 		EAB6885E1C3A4E3400E33E17 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B58531C449EF7003D03C6 /* ProgressHUD */,
 				EA49360E1C43912800D400ED /* VOSegmentedControl */,
 				EA91C71D1C3F9DF80040E1A3 /* PullingRefreshTableView */,
 				EA27C90C1C3CADEC00895FC8 /* HWTools */,
@@ -490,6 +522,7 @@
 			files = (
 				EA91C7171C3F57D60040E1A3 /* MainList.plist in Resources */,
 				EAB6886A1C3A766900E33E17 /* MainTableViewCell.xib in Resources */,
+				EA3B58571C449EF7003D03C6 /* ProgressHUD.bundle in Resources */,
 				EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */,
 				EA49360D1C43589300D400ED /* HotActivity.plist in Resources */,
 				EA91C72B1C3FB7660040E1A3 /* GoodActivity.plist in Resources */,
@@ -497,8 +530,10 @@
 				EA4936221C43A72300D400ED /* typeud21.plist in Resources */,
 				EA49361E1C43A5FC00D400ED /* typeid23.plist in Resources */,
 				EA49361C1C43A58400D400ED /* typeid6.plist in Resources */,
+				EA3B58901C4511C3003D03C6 /* Discover.plist in Resources */,
 				EA91C7231C3F9DF80040E1A3 /* blueArrowDown.png in Resources */,
 				EA07CDF21C42A49300E3057C /* Geocoder.plist in Resources */,
+				EA3B585D1C44FA62003D03C6 /* DiscoverTableViewCell.xib in Resources */,
 				EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */,
 				EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */,
 				EA91C7291C3FA3AD0040E1A3 /* GoodActivityTableViewCell.xib in Resources */,
@@ -572,6 +607,7 @@
 				EA4936171C43912900D400ED /* VOContentLayer.m in Sources */,
 				EA27C91D1C3CBFE100895FC8 /* ClassifyViewController.m in Sources */,
 				EA4936191C43912900D400ED /* VOSegment.m in Sources */,
+				EA3B585C1C44FA62003D03C6 /* DiscoverTableViewCell.m in Sources */,
 				EA27C9231C3CC06400895FC8 /* HotActivityViewController.m in Sources */,
 				EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */,
 				EA4936081C434F5600D400ED /* HotActivityTableViewCell.m in Sources */,
@@ -579,6 +615,7 @@
 				EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */,
 				EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */,
 				EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */,
+				EA3B58931C45125A003D03C6 /* DiscoverModel.m in Sources */,
 				EA49361A1C43912900D400ED /* VOSegmentedControl.m in Sources */,
 				EA91C7301C3FBE330040E1A3 /* GoodActivityModel.m in Sources */,
 				EA27C9171C3CBE6700895FC8 /* ActivityDetailViewController.m in Sources */,
@@ -587,6 +624,7 @@
 				EA49360B1C43512300D400ED /* HotActivityModel.m in Sources */,
 				EA27C91A1C3CBF3B00895FC8 /* ThemeViewController.m in Sources */,
 				EA91C7241C3F9DF80040E1A3 /* PullingRefreshTableView.m in Sources */,
+				EA3B58581C449EF7003D03C6 /* ProgressHUD.m in Sources */,
 				EAEAA2151C3E10D5002BE420 /* ActivityDetailView.m in Sources */,
 				EAB688301C3A1C3B00E33E17 /* main.m in Sources */,
 				EA27C9111C3CBC1400895FC8 /* SelectCityViewController.m in Sources */,

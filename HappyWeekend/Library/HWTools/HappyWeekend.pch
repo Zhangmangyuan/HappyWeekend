@@ -27,6 +27,11 @@
 #	define ZMYLog(...)
 #endif
 
+#define RGB(x,y,z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
+#define SeparatorColor RGB(228, 228, 228) //222 160 改成170
+
+
+
 #endif /* HappyWeekend_pch */
 
 

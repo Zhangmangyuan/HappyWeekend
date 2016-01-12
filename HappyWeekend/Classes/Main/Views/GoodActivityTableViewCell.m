@@ -7,6 +7,8 @@
 //
 
 #import "GoodActivityTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface GoodActivityTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
@@ -14,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *activityDistanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityPriceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *loveCountButton;
-@property (weak, nonatomic) IBOutlet UIImageView *ageBgImageView;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
 
@@ -29,6 +30,13 @@
 }
 
 - (void)setGoodModel:(GoodActivityModel *)goodModel {
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:goodModel.image] placeholderImage:nil];
+    
+    self.activityTitleLabel.text = goodModel.title;
+    self.activityPriceLabel.text = goodModel.price;
+    self.activityDistanceLabel.text = @"688.88km";
+    self.ageLabel.text = goodModel.age;
+    [self.loveCountButton setTitle:[NSString stringWithFormat:@"%ld",[goodModel.counts integerValue]] forState:UIControlStateNormal];
     
 }
 

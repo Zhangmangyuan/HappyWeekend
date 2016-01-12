@@ -10,4 +10,13 @@
 
 @implementation HotActivityModel
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
+    self = [super init];
+    if (self) {
+        self.img = dict[@"img"];
+        self.activityId = dict[@"id"];
+    }
+    return self;
+}
+
 @end

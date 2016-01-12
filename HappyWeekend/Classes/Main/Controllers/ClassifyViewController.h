@@ -10,4 +10,6 @@
 
 @interface ClassifyViewController : UIViewController
 
+@property (nonatomic, assign) ClassifyListType classifyListType;
+
 @end

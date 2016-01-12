@@ -10,4 +10,6 @@
 
 @interface HotActivityViewController : UIViewController
 
+
+
 @end

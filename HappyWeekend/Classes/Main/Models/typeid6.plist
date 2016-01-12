@@ -1,14 +1,515 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   typeid6.plist
-   HappyWeekend
+{
+code = 0;
+status = success;
+success =     {
+acData =         (
+{
+address = "\U6d77\U6dc0\U533a\U674f\U77f3\U53e3\U8def\U4e2d\U95f4\U827a\U672f\U56ed\U533a\U5185\Uff08\U6d77\U6dc0\U4e2d\U95f4\U5267\U573a\Uff09";
+age = "3-6\U5c81";
+counts = 8;
+endTime = 1454255999;
+id = 14414;
+image = "http://e.kumi.cn/images/article/201510/thumb_img/14414_thumb_A_1445208491834.jpg";
+lat = "39.959937";
+lng = "116.237746";
+"old_price" = "\Uffe5120";
+price = "\Uffe596";
+startTime = 1445097600;
+title = "\U4e00\U8d77\U53bb\U770b\U300a\U5c0f\U5361\U8f66\U2022\U53d8\U53d8\U53d8\U300b\U513f\U7ae5\U5267";
+type = 1;
+type0 = 0;
+type1 = 1;
+},
+{
+address = "\U4e2d\U56fd\U513f\U7ae5\U827a\U672f\U5267\U9662\Uff08\U4e1c\U5b89\U95e8\U5927\U885764\U53f7\Uff09";
+age = "3-6\U5c81";
+counts = 15;
+endTime = 1456675199;
+id = 14121;
+image = "http://e.kumi.cn/images/article/201509/thumb_img/14121_thumb_A_1443491453640.jpg";
+lat = "39.959889";
+lng = "116.238621";
+"old_price" = "\U00a5120";
+price = "\U00a596";
+startTime = 1443369600;
+title = "\U8da3\U5473\U76ca\U667a\U513f\U7ae5\U5267\U300a\U5c0f\U5409\U666e\U00b7\U53d8\U53d8\U53d8\U300b \U6211\U4eec\U4e00\U8d77\U6765\U53d8\U8eab\Uff01";
+type = 1;
+type0 = 0;
+type1 = 2;
+},
+{
+address = "\U6d77\U6dc0\U4e2d\U95f4\U5267\U573a\Uff08\U6d77\U6dc0\U533a\U674f\U77f3\U53e3\U8def \U4e2d\U95f4\U827a\U672f\U56ed\U533a\U5185\Uff09";
+age = "3-6\U5c81";
+counts = 8;
+endTime = 1456070399;
+id = 14245;
+image = "http://e.kumi.cn/images/article/201510/thumb_img/14245_thumb_A_1444613858689.jpg";
+lat = "39.959889";
+lng = "116.238621";
+price = "\U00a580";
+startTime = 1444492800;
+title = "\U6210\U8bed\U8fd8\U80fd\U8fd9\U6837\U5b66\Uff01";
+type = 1;
+type0 = 0;
+type1 = 3;
+},
+{
+address = "\U4e2d\U56fd\U513f\U7ae5\U827a\U672f\U5267\U9662\Uff08\U4e1c\U57ce\U533a\U4e1c\U5b89\U95e8\U5927\U885764\U53f7\Uff09";
+age = "3-6\U5c81";
+counts = 0;
+endTime = 1456847999;
+id = 15727;
+image = "http://e.kumi.cn/images/article/201601/thumb_img/15727_thumb_A_1452468018222.jpg";
+lat = "39.921137";
+lng = "116.414859";
+price = "\Uffe580";
+startTime = 1452355200;
+title = "\U4e2d\U56fd\U513f\U827a\U300a\U767d\U96ea\U516c\U4e3b\U548c\U4e03\U4e2a\U5c0f\U77ee\U4eba\U300b";
+type = 1;
+type0 = 0;
+type1 = 4;
+},
+{
+address = "\U4e2d\U56fd\U513f\U7ae5\U827a\U672f\U5267\U9662\Uff08\U4e1c\U5b89\U95e8\U5927\U885764\U53f7\Uff09\U5c0f\U5267\U573a";
+age = "3-6\U5c81";
+counts = 9;
+endTime = 1454255999;
+id = 14115;
+image = "http://e.kumi.cn/images/article/201509/thumb_img/14115_thumb_A_1443466546332.jpg";
+lat = "39.921137";
+lng = "116.414859";
+"old_price" = "\U00a5120";
+price = "\U00a596";
+startTime = 1443283200;
+title = "\U539f\U521b\U5267\U9996\U6f14\Uff01\U5e26\U5b69\U5b50\U6765\U513f\U827a\U770b\U5927\U620f\Uff01";
+type = 1;
+type0 = 0;
+type1 = 5;
+},
+{
+address = "\U4e2d\U56fd\U513f\U7ae5\U827a\U672f\U5267\U9662\Uff08\U4e1c\U5b89\U95e8\U5927\U885764\U53f7\Uff09";
+age = "3-6\U5c81";
+counts = 0;
+endTime = 1459007999;
+id = 15730;
+image = "http://e.kumi.cn/images/article/201601/thumb_img/15730_thumb_A_1452469880486.jpg";
+lat = "39.921456";
+lng = "116.414919";
+price = "\U00a580";
+startTime = 1452355200;
+tabel = "\U8001\U820d";
+title = "\U4e2d\U56fd\U513f\U827a\U300a\U5b9d\U8239\U300b \U8001\U820d\U5148\U751f\U552f\U4e00\U7684\U513f\U7ae5\U5267";
+type = 1;
+type0 = 0;
+type1 = 6;
+},
+{
+address = "\U4e2d\U56fd\U513f\U7ae5\U827a\U672f\U5267\U9662";
+age = "3-6\U5c81";
+counts = 1;
+endTime = 1455724799;
+id = 15636;
+image = "http://e.kumi.cn/images/article/201512/thumb_img/15636_thumb_A_1450722872799.jpg";
+lat = "39.921456";
+lng = "116.414919";
+"old_price" = "\Uffe5100";
+price = "\Uffe580";
+startTime = 1450972800;
+tabel = "\U513f\U7ae5\U76ca\U667a\U5267";
+title = "\U8d85\U4eba\U6c14\U82ac\U5170\U56fd\U5b9d\U59c6\U54aa\U65b0\U5e74\U9996\U6f14\U513f\U7ae5\U5267";
+type = 1;
+type0 = 0;
+type1 = 7;
+},
+{
+address = "\U4e2d\U56fd\U97f3\U4e50\U5b66\U9662\U9644\U4e2d\Uff08\U671d\U9633\U533a\U671d\U9633\U5317\U8def148\U53f7\U4e2d\U56fd\U97f3\U4e50\U5b66\U9662\U9644\U4e2d\U7efc\U5408\U697c3\U697c\U5927\U793c\U5802\Uff09";
+age = "3-6\U5c81";
+counts = 6;
+endTime = 1454083199;
+id = 15607;
+image = "http://e.kumi.cn/images/article/201512/thumb_img/15607_thumb_A_1450228144195.jpg";
+lat = "39.928746";
+lng = "116.50001";
+"old_price" = "\Uffe5999";
+price = "\Uffe59.9";
+startTime = 1450108800;
+title = "\U6211\U7684\U65b0\U5e74\U97f3\U4e50\U4f1a-9\U57579\U7279\U60e0";
+type = 1;
+type0 = 0;
+type1 = 8;
+},
+{
+address = "\U5317\U4eac\U5267\U9662\Uff08\U671d\U9633\U533a\U5b89\U6167\U91cc\U4e09\U533a10\U53f7\Uff09";
+age = "3-6\U5c81";
+counts = 0;
+endTime = 1456761599;
+id = 15722;
+image = "http://e.kumi.cn/images/article/201601/thumb_img/15722_thumb_A_1452217450486.JPG";
+lat = "39.997389";
+lng = "116.414586";
+price = "\Uffe580";
+startTime = 1452096000;
+title = "\U65e5\U5149\U733f\U519b\U56e2\U4e2d\U56fd\U5de1\U6f14\U4e4b\U5927\U5723\U5b66\U9662";
+type = 1;
+type0 = 0;
+type1 = 9;
+},
+{
+address = "\U671d\U9633\U533a\U5b89\U6167\U91cc\U4e09\U533a10\U53f7 \U5317\U4eac\U5267\U573a\Uff08\U5317\U8fb0\U8d2d\U7269\U4e2d\U5fc3\U5bf9\U9762\Uff09";
+age = "3-6\U5c81";
+counts = 1;
+endTime = 1455983999;
+hottype = 1;
+id = 15695;
+image = "http://e.kumi.cn/images/article/201601/thumb_img/15695_thumb_A_1451863615894.jpg";
+lat = "39.997389";
+lng = "116.414586";
+price = "\U00a596";
+startTime = 1451750400;
+tabel = "\U513f\U7ae5\U5267";
+title = "\U5f20\U827a\U8c0b\U821e\U7f8e\U56e2\U961f\U5236\U4f5c \U5927\U578b\U96ea\U666f\U513f\U7ae5\U5267\U300a\U96ea\U5b69\U5b501\U00b7\U98d8\U96ea\U8bb0\U5fc6\U300b";
+type = 1;
+type0 = 0;
+type1 = 10;
+},
+{
+address = "\U6d77\U6dc0\U533a\U4e2d\U5173\U6751\U5357\U5927\U885756\U53f7(\U8fd1\U5730\U94c1\U56db\U53f7\U7ebf)\t";
+age = "\U5168\U5e74\U9f84\U6bb5";
+counts = 28;
+id = 12926;
+image = "http://e.kumi.cn/images/article/201508/thumb_img/12926_thumb_A_1438819400045.jpg";
+lat = "39.945667";
+lng = "116.33455";
+price = "\U00a5180";
+title = "2015\U51b0\U4e0a\U8fea\U58eb\U5c3c\U4e4b\U9b54\U5e7b\U6b22\U4e50\U5b63 ";
+type = 0;
+type0 = 1;
+type1 = 10;
+},
+{
+address = "\U5317\U4eac\U5e02\U897f\U57ce\U533a\U5317\U65b0\U534e\U88571\U53f7(\U897f\U957f\U5b89\U8857\U516d\U90e8\U53e3\U897f\U5357\U89d2)\t";
+age = "\U5168\U5e74\U9f84\U6bb5";
+counts = 13;
+id = 12880;
+image = "http://e.kumi.cn/images/article/201508/thumb_img/12880_thumb_A_1438804508835.jpg";
+lat = "39.912546";
+lng = "116.389108";
+price = "\U00a5100";
+title = "\U7231\U4e50\U6c47\U300a\U7231\U4e3d\U4e1d\U68a6\U6e38\U4ed9\U5883\U300b\U7ecf\U5178\U7ae5\U8bdd\U6545\U4e8b\U97f3\U4e50\U4f1a";
+type = 0;
+type0 = 2;
+type1 = 10;
+},
+{
+address = "\U5317\U4eac\U5e02\U6d77\U6dc0\U533a\U4e2d\U5173\U6751\U5927\U885728\U53f7";
+age = "\U5168\U5e74\U9f84\U6bb5";
+counts = 13;
+id = 12910;
+image = "http://e.kumi.cn/images/article/201508/thumb_img/12910_thumb_A_1438816831539.jpg";
+lat = "39.982622";
+lng = "116.32476";
+price = "\U00a5100";
+title = "2015\U5e74\U79cb\U51ac\U5de7\U864e\U5927\U578b\U821e\U53f0\U5267\U300a\U51b7\U51b0\U51b0\U738b\U56fd\U5386\U9669\U8bb0\U300b\U5317\U4eac\U7ad9 ";
+type = 0;
+type0 = 3;
+type1 = 10;
+},
+{
+address = "\U4ea4\U9053\U53e3\U4e1c\U5927\U885785\U53f7\U4e1c\U57ce\U533a\U7b2c\U4e00\U56fe\U4e66\U9986";
+age = "3-6\U5c81";
+counts = 11;
+id = 12904;
+image = "http://e.kumi.cn/images/article/201508/thumb_img/12904_thumb_A_1438815504333.jpg";
+lat = "39.947486";
+lng = "116.419159";
+price = "\U00a5120";
+title = "\U539f\U521b\U513f\U7ae5\U97f3\U4e50\U5267\U8748\U8748\U5386\U9669\U8bb0\U4e4b\U300a\U535a\U7269\U9986\U7684\U79d8\U5bc6\U300b ";
+type = 0;
+type0 = 4;
+type1 = 10;
+},
+{
+address = "\U4ea4\U9053\U53e3\U4e1c\U5927\U885785\U53f7\U4e1c\U57ce\U533a\U7b2c\U4e00\U56fe\U4e66\U9986";
+age = "3-6\U5c81";
+counts = 9;
+id = 12898;
+image = "http://e.kumi.cn/images/article/201508/thumb_img/12898_thumb_A_1438814214078.jpg";
+lat = "39.947486";
+lng = "116.419159";
+price = "\U00a5100";
+title = "\U4eb2\U5b50\U82ad\U857e\U821e\U5267\U300a\U5c0f\U7ea2\U5e3d\U5386\U9669\U8bb0\U300b ";
+type = 0;
+type0 = 5;
+type1 = 10;
+},
+{
+address = "\U5317\U4eac\U5e02\U4e1c\U57ce\U533a\U767e\U8001\U6c47\U7535\U5f71\U4e2d\U5fc3(\U4e07\U56fd\U57ce\U5e97)";
+age = "\U5168\U5e74\U9f84\U6bb5";
+counts = 55;
+endTime = 1464451199;
+id = 9197;
+image = "http://e.kumi.cn/images/article/201505/thumb_img/9197_thumb_A_1432674317494.jpg";
+lat = "39.955907";
+lng = "116.445527";
+price = "\U00a519.9";
+startTime = 1432742400;
+title = "\U300a\U54c6\U5566A\U68a6\Uff1a\U4f34\U6211\U540c\U884c\U300b3D\U7535\U5f71";
+type = 0;
+type0 = 6;
+type1 = 10;
+}
+);
+cate =         (
+8,
+62,
+18,
+17,
+11,
+16,
+20,
+9,
+61,
+19,
+7,
+2252,
+2305
+);
+category =         {
+ages =             {
+"cat_id" = 55;
+"cat_name" = "\U5e74\U9f84";
+show =                 (
+{
+"cat_id" = 55;
+"cat_name" = "\U5168\U90e8";
+},
+{
+"cat_id" = 83;
+"cat_name" = "0-3\U5c81";
+},
+{
+"cat_id" = 56;
+"cat_name" = "3-6\U5c81";
+},
+{
+"cat_id" = 59;
+"cat_name" = "6-12\U5c81";
+},
+{
+"cat_id" = 84;
+"cat_name" = "12\U5c81\U4ee5\U4e0a";
+},
+{
+"cat_id" = 104;
+"cat_name" = "\U5168\U5e74\U9f84\U6bb5";
+}
+);
+};
+areas =             {
+"cat_id" = 235;
+"cat_name" = "\U5317\U4eac\U533a\U57df";
+show =                 (
+{
+"cat_id" = 235;
+"cat_name" = "\U5168\U90e8";
+},
+{
+"cat_id" = 2;
+"cat_name" = "\U897f\U57ce\U533a";
+},
+{
+"cat_id" = 3;
+"cat_name" = "\U4e1c\U57ce\U533a";
+},
+{
+"cat_id" = 5;
+"cat_name" = "\U671d\U9633\U533a";
+},
+{
+"cat_id" = 64;
+"cat_name" = "\U6d77\U6dc0\U533a";
+},
+{
+"cat_id" = 65;
+"cat_name" = "\U4e30\U53f0\U533a";
+},
+{
+"cat_id" = 66;
+"cat_name" = "\U77f3\U666f\U5c71\U533a";
+},
+{
+"cat_id" = 73;
+"cat_name" = "\U95e8\U5934\U6c9f\U533a";
+},
+{
+"cat_id" = 69;
+"cat_name" = "\U623f\U5c71\U533a";
+},
+{
+"cat_id" = 53;
+"cat_name" = "\U5927\U5174\U533a";
+},
+{
+"cat_id" = 67;
+"cat_name" = "\U901a\U5dde\U533a";
+},
+{
+"cat_id" = 68;
+"cat_name" = "\U987a\U4e49\U533a";
+},
+{
+"cat_id" = 70;
+"cat_name" = "\U660c\U5e73\U533a";
+},
+{
+"cat_id" = 71;
+"cat_name" = "\U6000\U67d4\U533a";
+},
+{
+"cat_id" = 74;
+"cat_name" = "\U5bc6\U4e91\U53bf";
+},
+{
+"cat_id" = 72;
+"cat_name" = "\U5e73\U8c37\U533a";
+},
+{
+"cat_id" = 75;
+"cat_name" = "\U5ef6\U5e86\U53bf";
+}
+);
+};
+cat =             (
+{
+"cat_id" = 6;
+"cat_name" = "\U6f14\U51fa\U5267\U76ee";
+},
+{
+"cat_id" = 23;
+"cat_name" = "\U666f\U70b9\U573a\U9986";
+},
+{
+"cat_id" = 22;
+"cat_name" = "\U5b66\U4e60\U76ca\U667a";
+},
+{
+"cat_id" = 21;
+"cat_name" = "\U4eb2\U5b50\U65c5\U6e38";
+}
+);
+prices =             {
+"cat_id" = 93;
+"cat_name" = "\U4ef7\U683c";
+show =                 (
+{
+"cat_id" = 93;
+"cat_name" = "\U5168\U90e8";
+},
+{
+"cat_id" = 100;
+"cat_name" = "\U514d\U8d39";
+},
+{
+"cat_id" = 101;
+"cat_name" = "0-100\U5143";
+},
+{
+"cat_id" = 102;
+"cat_name" = "100-200\U5143";
+},
+{
+"cat_id" = 103;
+"cat_name" = "200\U4ee5\U4e0a";
+},
+{
+"cat_id" = 215;
+"cat_name" = "\U7535\U8be2";
+}
+);
+};
+shaixuan =             {
+"cat_id" = 6;
+"cat_name" = "\U7b5b\U9009";
+show =                 (
+{
+"is_hot" = 0;
+title = "\U5168\U90e8";
+},
+{
+"is_hot" = 1;
+title = "\U70ed\U95e8\U63a8\U8350";
+},
+{
+"is_hot" = 2;
+title = "\U6700\U65b0\U6dfb\U52a0";
+}
+);
+};
+types =             {
+"cat_id" = 6;
+"cat_name" = "\U7c7b\U578b";
+show =                 (
+{
+"cat_id" = 6;
+"cat_name" = "\U5168\U90e8";
+},
+{
+"cat_id" = 8;
+"cat_name" = "\U52a8\U6f2b\U5267";
+},
+{
+"cat_id" = 62;
+"cat_name" = "\U6b4c\U821e\U5267";
+},
+{
+"cat_id" = 18;
+"cat_name" = "\U513f\U7ae5\U5267";
+},
+{
+"cat_id" = 17;
+"cat_name" = "\U8bdd\U5267";
+},
+{
+"cat_id" = 11;
+"cat_name" = "\U6728\U5076\U5267";
+},
+{
+"cat_id" = 16;
+"cat_name" = "\U76ae\U5f71\U620f";
+},
+{
+"cat_id" = 20;
+"cat_name" = "\U52a8\U753b\U7535\U5f71";
+},
+{
+"cat_id" = 9;
+"cat_name" = "\U97f3\U4e50\U5267";
+},
+{
+"cat_id" = 61;
+"cat_name" = "\U620f\U66f2";
+},
+{
+"cat_id" = 19;
+"cat_name" = "\U82ad\U857e\U821e";
+},
+{
+"cat_id" = 7;
+"cat_name" = "\U97f3\U4e50\U4f1a";
+},
+{
+"cat_id" = 2252;
+"cat_name" = "\U4eba\U5076\U5267";
+},
+{
+"cat_id" = 2305;
+"cat_name" = "\U5176\U4ed6\U8868\U6f14";
+}
+);
+};
+};
+total = 16;
+};
+updatetime = 1452502461;
+}
 
-   Created by 张茫原 on 16/1/11.
-   Copyright (c) 2016年 芒果科技. All rights reserved.
--->
-<plist version="1.0">
-    <dict>
-    
-    </dict>
-</plist>

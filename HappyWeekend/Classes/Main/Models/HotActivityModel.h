@@ -10,4 +10,10 @@
 
 @interface HotActivityModel : NSObject
 
+@property (nonatomic, copy) NSString *img;
+@property (nonatomic, copy) NSString *activityId;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HotActivityModel.h"
 @interface HotActivityTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) HotActivityModel *hotModel;
+
 
 @end

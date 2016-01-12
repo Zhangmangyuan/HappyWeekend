@@ -248,6 +248,8 @@
 //分类列表
 - (void)mainActivityButtonAction:(UIButton *)activityButton {
     ClassifyViewController *classifyVC = [[ClassifyViewController alloc] init];
+    classifyVC.classifyListType = activityButton.tag - 100 + 1;
+    classifyVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
@@ -261,6 +263,7 @@
 //热门专题
 - (void)hotActivityButton {
     HotActivityViewController *hotVC = [[HotActivityViewController alloc] init];
+    hotVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hotVC animated:YES];
 }
 

@@ -10,6 +10,8 @@
 #import "PullingRefreshTableView.h"
 #import "GoodActivityTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "GoodActivityModel.h"
+#import "ActivityDetailViewController.h"
 
 @interface GoodActivityViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>
 {
@@ -17,6 +19,7 @@
 }
 @property (nonatomic, assign) BOOL refreshing;
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -36,18 +39,26 @@
 #pragma mark -----  UITableViewDataSource 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GoodActivityTableViewCell *goodCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    GoodActivityModel *model = self.dataArray[indexPath.row];
+    goodCell.goodModel = model;
+    
     return goodCell;
 }
 
 #pragma mark ------ UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    GoodActivityModel *model = self.dataArray[indexPath.row];
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
+    activityVC.activityId = model.activityId;
+    [self.navigationController pushViewController:activityVC animated:YES];
 }
 
 #pragma mark ------- PullingRefreshDelegate
@@ -61,6 +72,7 @@
 //tableView上拉刷新开始的时候调用
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView {
     _pageCount += 1;
+    self.refreshing = NO;
     [self performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
 }
 
@@ -76,7 +88,25 @@
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [sessionManager GET:[NSString stringWithFormat:@"%@&page=%ld",kGoodActivity,_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        NSDictionary *dic = responseObject;
+        NSString *status = dic[@"status"];
+        NSInteger code = [dic[@"code"] integerValue];
+        if ([status isEqualToString:@"success"] && code == 0) {
+            NSDictionary *successDic = dic[@"success"];
+            NSArray *acDataArray = successDic[@"acData"];
+            if (self.refreshing) {
+                //下拉刷新的时候需要移除数组中的元素
+                if (self.dataArray.count > 0) {
+                    [self.dataArray removeAllObjects];
+                }
+            }
+            for (NSDictionary *dic in acDataArray) {
+                GoodActivityModel *model = [[GoodActivityModel alloc] initWithDictionary:dic];
+                [self.dataArray addObject:model];
+            }
+        } else {
+            
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZMYLog(@"%@",error);
@@ -85,6 +115,7 @@
     //完成加载
     [self.tableView tableViewDidFinishedLoading];
     self.tableView.reachedTheEnd = NO;
+    //刷新tableView，他会重新执行tableView的所有代理方法
     [self.tableView reloadData];
 }
 
@@ -108,6 +139,13 @@
         self.tableView.rowHeight = 90;
     }
     return _tableView;
+}
+
+- (NSMutableArray *)dataArray {
+    if (_dataArray == nil) {
+        self.dataArray = [NSMutableArray new];
+    }
+    return _dataArray;
 }
 
 - (void)didReceiveMemoryWarning {

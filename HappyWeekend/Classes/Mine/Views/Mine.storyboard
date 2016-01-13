@@ -8,15 +8,14 @@
         <!--我的-->
         <scene sceneID="wg1-Xz-fJH">
             <objects>
-                <viewController id="a3Q-kh-8J8" sceneMemberID="viewController">
+                <viewController id="a3Q-kh-8J8" customClass="MineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GOw-Kp-NMI"/>
                         <viewControllerLayoutGuide type="bottom" id="qPS-Iq-X0S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k9W-DK-jCF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.5356021071" green="1" blue="0.70760881170000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="rcQ-32-ZEY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -31,7 +30,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hot-Kd-2LL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KPG-Af-wQO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KPG-Af-wQO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

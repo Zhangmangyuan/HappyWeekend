@@ -178,7 +178,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dcf-Tu-7Ok">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.37647058823529411" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>

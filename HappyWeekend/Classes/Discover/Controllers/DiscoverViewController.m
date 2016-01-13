@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barTintColor = MainColor;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"DiscoverTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];

@@ -50,7 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.barTintColor = MainColor;
+
     //left
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
     leftBarBtn.tintColor = [UIColor whiteColor];
@@ -69,7 +70,7 @@
     
     [self configTableViewHeaderView];
     //请求网络数据
-//    [self requestModel];
+    [self requestModel];
     //启动定时器
     [self startTimer];
 }

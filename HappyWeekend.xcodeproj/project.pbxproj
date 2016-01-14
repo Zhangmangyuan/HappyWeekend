@@ -48,6 +48,8 @@
 		EA49361E1C43A5FC00D400ED /* typeid23.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA49361D1C43A5FC00D400ED /* typeid23.plist */; };
 		EA4936201C43A65900D400ED /* typeid22.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA49361F1C43A65900D400ED /* typeid22.plist */; };
 		EA4936221C43A72300D400ED /* typeud21.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4936211C43A72300D400ED /* typeud21.plist */; };
+		EA520EFE1C4737D100CB1FF4 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA520EFD1C4737D100CB1FF4 /* ShareView.m */; };
+		EA520F011C474DBA00CB1FF4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA520F001C474DBA00CB1FF4 /* ShareViewController.m */; };
 		EA91C7151C3F55950040E1A3 /* ActivityDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91C7141C3F55950040E1A3 /* ActivityDetail.plist */; };
 		EA91C7171C3F57D60040E1A3 /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91C7161C3F57D60040E1A3 /* MainList.plist */; };
 		EA91C7191C3F5D3D0040E1A3 /* ActivityTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91C7181C3F5D3D0040E1A3 /* ActivityTheme.plist */; };
@@ -151,6 +153,10 @@
 		EA49361D1C43A5FC00D400ED /* typeid23.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeid23.plist; sourceTree = "<group>"; };
 		EA49361F1C43A65900D400ED /* typeid22.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeid22.plist; sourceTree = "<group>"; };
 		EA4936211C43A72300D400ED /* typeud21.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeud21.plist; sourceTree = "<group>"; };
+		EA520EFC1C4737D100CB1FF4 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		EA520EFD1C4737D100CB1FF4 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		EA520EFF1C474DBA00CB1FF4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		EA520F001C474DBA00CB1FF4 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		EA91C7141C3F55950040E1A3 /* ActivityDetail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = ActivityDetail.plist; sourceTree = "<group>"; };
 		EA91C7161C3F57D60040E1A3 /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
 		EA91C7181C3F5D3D0040E1A3 /* ActivityTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ActivityTheme.plist; sourceTree = "<group>"; };
@@ -261,6 +267,10 @@
 				EAD0A7371C3E4C2600E28F10 /* HWTools.m */,
 				EAD0A7391C3E5B0200E28F10 /* UIView+Extension.h */,
 				EAD0A73A1C3E5B0200E28F10 /* UIView+Extension.m */,
+				EA520EFC1C4737D100CB1FF4 /* ShareView.h */,
+				EA520EFD1C4737D100CB1FF4 /* ShareView.m */,
+				EA520EFF1C474DBA00CB1FF4 /* ShareViewController.h */,
+				EA520F001C474DBA00CB1FF4 /* ShareViewController.m */,
 			);
 			path = HWTools;
 			sourceTree = "<group>";
@@ -698,6 +708,7 @@
 				EA27C9201C3CC05800895FC8 /* GoodActivityViewController.m in Sources */,
 				EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */,
 				EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */,
+				EA520F011C474DBA00CB1FF4 /* ShareViewController.m in Sources */,
 				EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */,
 				EA3B58931C45125A003D03C6 /* DiscoverModel.m in Sources */,
 				EA49361A1C43912900D400ED /* VOSegmentedControl.m in Sources */,
@@ -705,6 +716,7 @@
 				EA27C9171C3CBE6700895FC8 /* ActivityDetailViewController.m in Sources */,
 				EA27C9141C3CBDA100895FC8 /* SearchViewController.m in Sources */,
 				EA91C71C1C3F5EC00040E1A3 /* ActivityThemeView.m in Sources */,
+				EA520EFE1C4737D100CB1FF4 /* ShareView.m in Sources */,
 				EA49360B1C43512300D400ED /* HotActivityModel.m in Sources */,
 				EA27C91A1C3CBF3B00895FC8 /* ThemeViewController.m in Sources */,
 				EA91C7241C3F9DF80040E1A3 /* PullingRefreshTableView.m in Sources */,

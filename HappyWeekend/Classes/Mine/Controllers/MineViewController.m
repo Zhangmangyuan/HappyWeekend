@@ -10,6 +10,7 @@
 #import <SDWebImage/SDImageCache.h>
 #import <MessageUI/MessageUI.h>
 #import "ProgressHUD.h"
+#import "ShareView.h"
 
 @interface MineViewController ()<UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate>
 
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) UILabel *nikeNameLabel;
 @property (nonatomic, strong) NSMutableArray *titleArray;
 @property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic, strong) ShareView *shareView;
+
 @end
 
 @implementation MineViewController
@@ -34,6 +37,7 @@
     self.imageArray = @[@"mine_clear",@"mine_message",@"mine_share",@"mine_appStore",@"mine_appVersion"];
     
     [self setUpTabelViewHeaderView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushShareWeiboVC) name:@"ShareToSinaWeibo" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,13 +79,8 @@
     switch (indexPath.row) {
         case 0:
         {
-            //清除缓存
-            ZMYLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-            SDImageCache *imageCache = [SDImageCache sharedImageCache];
-            [imageCache clearDisk];
-            [self.titleArray replaceObjectAtIndex:0 withObject:@"清除图片缓存"];
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [ProgressHUD show:@"正在为您清理中..."];
+            [self performSelector:@selector(clearImage) withObject:nil afterDelay:2.0];
         }
             break;
         case 1:
@@ -196,42 +195,30 @@
 }
 
 - (void)share {
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    self.shareView = [[ShareView alloc] init];
+    [window addSubview:self.shareView];
+    return;
+}
+
+- (void)clearImage {
+    [ProgressHUD showSuccess:@"占您的地儿已经挪开."];
+    //清除缓存
+    ZMYLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
+    SDImageCache *imageCache = [SDImageCache sharedImageCache];
+    [imageCache clearDisk];
+    [self.titleArray replaceObjectAtIndex:0 withObject:@"清除图片缓存"];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)pushShareWeiboVC {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.shareView removeAllChildrenViews];
     
-    
-    
-    [UIView animateWithDuration:1.0 animations:^{
-        UIWindow *window = [[UIApplication sharedApplication].delegate window];
-        
-        UIView *shareView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 200, kScreenWidth, 200)];
-        shareView.backgroundColor = [UIColor redColor];
-        [window addSubview:shareView];
-        
-        //weibo
-        UIButton *weiboBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        weiboBtn.frame = CGRectMake(20, 40, 70, 70);
-        [weiboBtn setImage:[UIImage imageNamed:@"share_weibo"] forState:UIControlStateNormal];
-        [shareView addSubview:weiboBtn];
-        
-        
-        //friend
-        UIButton *friendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        friendBtn.frame = CGRectMake(130, 40, 70, 70);
-        [friendBtn setImage:[UIImage imageNamed:@"share_friend"] forState:UIControlStateNormal];
-        [shareView addSubview:friendBtn];
-        
-        //Circle
-        UIButton *circleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        circleBtn.frame = CGRectMake(210, 40, 70, 70);
-        [circleBtn setImage:[UIImage imageNamed:@"share_pengyouquan"] forState:UIControlStateNormal];
-        [shareView addSubview:circleBtn];
-        
-        //remove
-        UIButton *removeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        removeBtn.frame = CGRectMake(20, 100, kScreenWidth - 40, 44);
-        [removeBtn setTitle:@"取消" forState:UIControlStateNormal];
-        [shareView addSubview:removeBtn];
-        
-    }];
+    UIStoryboard *mineStoryBoard = [UIStoryboard storyboardWithName:@"Mine" bundle:nil];
+    UINavigationController *shareNav = [mineStoryBoard instantiateViewControllerWithIdentifier:@"ShareNav"];
+    [self.navigationController presentViewController:shareNav animated:YES completion:nil];
 }
 
 #pragma mark ----------- Lazy Loading

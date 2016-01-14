@@ -24,6 +24,107 @@
             </objects>
             <point key="canvasLocation" x="1454.5" y="497.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ZUW-Ph-8rE">
+            <objects>
+                <viewController id="wqh-jm-7ra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YEm-39-45t"/>
+                        <viewControllerLayoutGuide type="bottom" id="tPB-KZ-d8A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x1q-K7-gj3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-VI-fU2">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-Uw-DU0">
+                                        <rect key="frame" x="30" y="140" width="315" height="40"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_friend" translatesAutoresizingMaskIntoConstraints="NO" id="eXU-Gc-0nx">
+                                        <rect key="frame" x="50" y="30" width="50" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_pengyouquan" translatesAutoresizingMaskIntoConstraints="NO" id="gob-Nx-FCJ">
+                                        <rect key="frame" x="280" y="31" width="50" height="50"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信好友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsH-Dr-EgS">
+                                        <rect key="frame" x="42" y="90" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新浪微博" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpi-k3-8T3">
+                                        <rect key="frame" x="154" y="90" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信朋友圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nQ-wR-Szg">
+                                        <rect key="frame" x="262" y="90" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_weibo" translatesAutoresizingMaskIntoConstraints="NO" id="vBd-YG-p1v">
+                                        <rect key="frame" x="165" y="31" width="50" height="50"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RE-t3-yKk">
+                                        <rect key="frame" x="32" y="26" width="85" height="85"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-PD-K3g">
+                                        <rect key="frame" x="148" y="26" width="85" height="85"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY6-mG-tcF">
+                                        <rect key="frame" x="263" y="26" width="85" height="85"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.93948323180000004" blue="0.30364074660000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKv-O4-cQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010.5" y="463.5"/>
+        </scene>
+        <!--分享到新浪微博-->
+        <scene sceneID="rPZ-74-FCn">
+            <objects>
+                <viewController storyboardIdentifier="ShareVC" id="cs3-Eu-2zv" customClass="ShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yqz-n7-GXR"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOs-WJ-YI4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jId-xn-Gnl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ggN-kD-cJd">
+                                <rect key="frame" x="0.0" y="-6" width="375" height="231"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="分享到新浪微博" id="lYI-XP-r5J"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="ggN-kD-cJd" id="D6n-ex-2zA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pv-b3-ipG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3311.5" y="463.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="c1r-7E-3HY">
             <objects>
@@ -43,5 +144,32 @@
             </objects>
             <point key="canvasLocation" x="869" y="498"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x3z-4w-8ZY">
+            <objects>
+                <navigationController storyboardIdentifier="ShareNav" automaticallyAdjustsScrollViewInsets="NO" id="Lef-aw-5xG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxD-AT-4x0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cs3-Eu-2zv" kind="relationship" relationship="rootViewController" id="fel-96-2dQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntt-kt-OaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2499" y="463"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="share_friend" width="35" height="35"/>
+        <image name="share_pengyouquan" width="35" height="35"/>
+        <image name="share_weibo" width="35" height="35"/>
+    </resources>
 </document>

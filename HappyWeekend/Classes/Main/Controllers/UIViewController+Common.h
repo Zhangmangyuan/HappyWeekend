@@ -11,5 +11,7 @@
 @interface UIViewController (Common)
 
 - (void)showBarkButton;
+- (void)showRightButtonWithTitle:(NSString *)title;
+
 
 @end

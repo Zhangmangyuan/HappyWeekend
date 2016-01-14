@@ -74,6 +74,38 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
+        //发送成功
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ShareToSinaWeibo" object:nil userInfo:nil];
+    }
+    
+//    if ([response isKindOfClass:[WBProvideMessageForWeiboResponse class]]) {
+//        NSString *title = @"发送结果";
+//        NSString *message = [NSString stringWithFormat:@"响应状态: %d\n响应UserInfo数据: %@\n原请求UserInfo数据: %@", (int)response.statusCode, response.userInfo, response.requestUserInfo];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+//                                                        message:message
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"确定"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//    } else if ([response isKindOfClass:WBAuthorizeResponse.class])
+//    {
+//        
+//        NSString *title = NSLocalizedString(@"认证结果", nil);
+//        NSString *message = [NSString stringWithFormat:@"%@: %d\nresponse.userId: %@\nresponse.accessToken: %@\n%@: %@\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken],  NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil), response.requestUserInfo];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+//                                                        message:message
+//                                                       delegate:nil
+//                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+//                                              otherButtonTitles:nil];
+//        
+//        [alert show];
+//    }
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

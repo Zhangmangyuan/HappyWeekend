@@ -24,4 +24,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)showRightButtonWithTitle:(NSString *)title {
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 44, 44);
+    [rightBtn setTitle:title forState:UIControlStateNormal];
+    [rightBtn addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarBtn;
+}
+
 @end

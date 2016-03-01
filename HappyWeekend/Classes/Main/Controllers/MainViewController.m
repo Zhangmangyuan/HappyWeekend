@@ -70,7 +70,7 @@
     
     [self configTableViewHeaderView];
     //请求网络数据
-//    [self requestModel];
+    [self requestModel];
     //启动定时器
     [self startTimer];
 }
@@ -151,7 +151,8 @@
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barButton {
     SelectCityViewController *selectCityVC = [[SelectCityViewController alloc] init];
-    [self.navigationController presentViewController:selectCityVC animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selectCityVC];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 //搜索关键字

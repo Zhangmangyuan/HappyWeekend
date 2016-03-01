@@ -1,0 +1,13 @@
+{
+City = "\U6d1b\U9633\U5e02";
+Country = "\U4e2d\U56fd";
+CountryCode = CN;
+FormattedAddressLines =     (
+"\U4e2d\U56fd\U6cb3\U5357\U7701\U6d1b\U9633\U5e02\U6d1b\U9f99\U533a\U53e4\U57ce\U8857\U9053\U4fee\U8fdc\U8def"
+);
+Name = "\U6d1b\U9633\U7406\U5de5\U5b66\U9662-\U7535\U6c14\U5de5\U7a0b\U4e0e\U81ea\U52a8\U5316\U5b9e\U9a8c\U4e2d\U5fc3";
+State = "\U6cb3\U5357\U7701";
+Street = "\U4fee\U8fdc\U8def";
+SubLocality = "\U6d1b\U9f99\U533a";
+Thoroughfare = "\U4fee\U8fdc\U8def";
+}

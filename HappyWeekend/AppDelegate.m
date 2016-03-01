@@ -8,8 +8,19 @@
 
 #import "AppDelegate.h"
 #import "WeiboSDK.h"
+#import "WXApi.h"
+#import <BmobSDK/Bmob.h>
+//1.引入定位所需的框架
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()<WeiboSDKDelegate>
+//5.遵循定位代理协议
+@interface AppDelegate ()<WeiboSDKDelegate,WXApiDelegate,CLLocationManagerDelegate>
+{
+    //2.创建定位所需要的类的实例对象
+    CLLocationManager *_locationManager;
+    //创建地理编码对象
+    CLGeocoder *_geocoder;
+}
 
 @end
 
@@ -19,9 +30,41 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    //3.初始化定位对象
+    _locationManager = [[CLLocationManager alloc] init];
+    //初始化地理编码对象
+    _geocoder = [[CLGeocoder alloc] init];
+    
+    if (![CLLocationManager locationServicesEnabled]) {
+        ZMYLog(@"用户位置服务不可用");
+    }
+    
+    //4.如果没有授权则请求用户授权
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        [_locationManager requestWhenInUseAuthorization];
+    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        //设置代理
+        _locationManager.delegate = self;
+        //设置定位精度,定位精度越高越耗电
+        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        //定位频率，每隔多少米定位一次
+        CLLocationDistance distance = 10.012345;
+        _locationManager.distanceFilter = distance;
+        //启用定位服务
+        [_locationManager startUpdatingLocation];
+        
+    }
+    
+    //向新浪微博注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
     
+    //向微信注册
+    [WXApi registerApp:kWeixinAppID];
+    
+    //注册bmobkey
+    [Bmob registerWithAppKey:kBmobAppkey];
     
     //UITabbarController
     self.tabBarVC = [[UITabBarController alloc] init];
@@ -67,12 +110,27 @@
 #pragma mark  -------  Share WeiboSDK
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [WeiboSDK handleOpenURL:url delegate:self];
+    NSString *string =[url absoluteString];
+    if ([string hasPrefix:@"wb4249192859"]) {
+        return [WeiboSDK handleOpenURL:url delegate:self];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [WeiboSDK handleOpenURL:url delegate:self];
+    NSString *string =[url absoluteString];
+    if ([string hasPrefix:@"wb4249192859"]) {
+        return [WeiboSDK handleOpenURL:url delegate:self];
+    } else {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
 }
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
+    ZMYLog(@"%@",request);
+}
+
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
@@ -105,6 +163,38 @@
 //    }
     
 }
+
+#pragma mark ---------  CLLocationManagerDelegate
+
+/*!
+ *  @author 芒果iOS, 16-02-29 15:02:51
+ *
+ *  定位协议代理方法
+ *
+ *  @param manager   当前使用的定位对象
+ *  @param locations 返回定位的数据，是一个数组对象，数组里边元素是CLLocation类型
+ *
+ *  @since 1.0
+ */
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    ZMYLog(@"%@", locations);
+    //从数组中取出一个定位的信息
+    CLLocation *location = [locations lastObject];
+    //从CLLoction中取出坐标
+    //CLLocationCoordinate2D 坐标系，里边包含经度和纬度
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    ZMYLog(@"维度：%f 经度：%f 海拔：%f 航向：%f 行走速度:%f", coordinate.latitude, coordinate.longitude, location.altitude, location.course, location.speed);
+    
+    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        CLPlacemark *placeMark = [placemarks firstObject];
+        NSString *city = placeMark.addressDictionary[@"City"];
+        NSLog(@"%@", placeMark.addressDictionary);
+    }];
+    //如果不需要使用定位服务的时候，及时关闭定位服务
+    ZMYLog(@"%@ %@", _locationManager, manager);
+    [_locationManager stopUpdatingLocation];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

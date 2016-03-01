@@ -8,8 +8,9 @@
 
 #import "ShareView.h"
 #import "WeiboSDK.h"
+#import "WXApi.h"
 
-@interface ShareView ()
+@interface ShareView ()<WXApiDelegate>
 
 @property (nonatomic, strong) UIView *blackView;
 @property (nonatomic, strong) UIView *shareView;
@@ -124,19 +125,26 @@
 }
 
 - (void)shareWeibo {
+    [self removeAllChildrenViews];
     //微博sso授权
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
     request.redirectURI = kRedirectURL;
     request.scope = @"all";
-    request.userInfo = @{@"userName" : @"Mango-iOS"};
+//    request.userInfo = @{@"userName" : @"Mango-iOS"};
+    request.userInfo = @{@"SSO_From": @"SendMessageToWeiboViewController",
+                         @"Other_Info_1": [NSNumber numberWithInt:123],
+                         @"Other_Info_2": @[@"obj1", @"obj2"],
+                         @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};;
     [WeiboSDK sendRequest:request];
 }
 
 - (void)shareWeiXinFriend {
+    [self removeAllChildrenViews];
     ZMYLog(@"微信好友");
 }
 
 - (void)shareWeiXinCircle {
+    [self removeAllChildrenViews];
     ZMYLog(@"微信朋友圈");
 }
 

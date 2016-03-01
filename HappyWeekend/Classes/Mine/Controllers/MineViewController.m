@@ -128,10 +128,14 @@
     [headView addSubview:self.nikeNameLabel];
     
     self.tableView.tableHeaderView = headView;
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 - (void)login {
-    
+    UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UINavigationController *nav = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+    [self.navigationController presentViewController:nav animated:YES completion:nil
+     ];
 }
 
 - (void)sendEmail {

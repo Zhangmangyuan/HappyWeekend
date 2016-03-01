@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		D79ECE3F61CAE0DCD6B27B42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752563C37DE3A0DC3CD5EBDC /* libPods.a */; };
 		EA07CDF21C42A49300E3057C /* Geocoder.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA07CDF11C42A49300E3057C /* Geocoder.plist */; };
+		EA0954341C47DAEF00E08B31 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0954311C47DAEF00E08B31 /* libWeChatSDK.a */; };
+		EA0954361C47DBF300E08B31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0954351C47DBF200E08B31 /* libc++.tbd */; };
+		EA1E28C31C48E91100893D5C /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28C21C48E91100893D5C /* BmobSDK.framework */; };
+		EA1E28C51C48E96800893D5C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28C41C48E96800893D5C /* CoreLocation.framework */; };
+		EA1E28C71C48E99A00893D5C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28C61C48E99A00893D5C /* MobileCoreServices.framework */; };
+		EA1E28C91C48E9A500893D5C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28C81C48E9A500893D5C /* CFNetwork.framework */; };
+		EA1E28CB1C48E9B900893D5C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28CA1C48E9B900893D5C /* libz.1.2.5.tbd */; };
+		EA1E28CD1C48E9CA00893D5C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28CC1C48E9CA00893D5C /* libicucore.tbd */; };
+		EA1E28CF1C48E9DD00893D5C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28CE1C48E9DD00893D5C /* AVFoundation.framework */; };
+		EA1E28D11C48E9EB00893D5C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E28D01C48E9EB00893D5C /* MediaPlayer.framework */; };
+		EA1E28D71C48ED0800893D5C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1E28D61C48ED0800893D5C /* Login.storyboard */; };
+		EA1E28DA1C48ED1B00893D5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E28D91C48ED1B00893D5C /* LoginViewController.m */; };
 		EA27C9111C3CBC1400895FC8 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9101C3CBC1400895FC8 /* SelectCityViewController.m */; };
 		EA27C9141C3CBDA100895FC8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9131C3CBDA100895FC8 /* SearchViewController.m */; };
 		EA27C9171C3CBE6700895FC8 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9161C3CBE6700895FC8 /* ActivityDetailViewController.m */; };
@@ -85,6 +97,21 @@
 		752563C37DE3A0DC3CD5EBDC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		773E4555705A154D421C4E83 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EA07CDF11C42A49300E3057C /* Geocoder.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Geocoder.plist; sourceTree = "<group>"; };
+		EA0954311C47DAEF00E08B31 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		EA0954321C47DAEF00E08B31 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		EA0954331C47DAEF00E08B31 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		EA0954351C47DBF200E08B31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EA1E28C21C48E91100893D5C /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		EA1E28C41C48E96800893D5C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA1E28C61C48E99A00893D5C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EA1E28C81C48E9A500893D5C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EA1E28CA1C48E9B900893D5C /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		EA1E28CC1C48E9CA00893D5C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		EA1E28CE1C48E9DD00893D5C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EA1E28D01C48E9EB00893D5C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EA1E28D61C48ED0800893D5C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EA1E28D81C48ED1B00893D5C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EA1E28D91C48ED1B00893D5C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EA27C90D1C3CADEC00895FC8 /* HappyWeekend.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyWeekend.pch; sourceTree = "<group>"; };
 		EA27C90E1C3CB30600895FC8 /* HWDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWDefine.h; sourceTree = "<group>"; };
 		EA27C90F1C3CBC1400895FC8 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
@@ -207,20 +234,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1E28C51C48E96800893D5C /* CoreLocation.framework in Frameworks */,
+				EA1E28D11C48E9EB00893D5C /* MediaPlayer.framework in Frameworks */,
+				EA1E28CF1C48E9DD00893D5C /* AVFoundation.framework in Frameworks */,
+				EA1E28CD1C48E9CA00893D5C /* libicucore.tbd in Frameworks */,
+				EA1E28CB1C48E9B900893D5C /* libz.1.2.5.tbd in Frameworks */,
+				EA1E28C91C48E9A500893D5C /* CFNetwork.framework in Frameworks */,
+				EA1E28C71C48E99A00893D5C /* MobileCoreServices.framework in Frameworks */,
+				EA372FED1C4650A600E602D4 /* CoreGraphics.framework in Frameworks */,
+				EA372FE31C46507600E602D4 /* Security.framework in Frameworks */,
+				EA0954361C47DBF300E08B31 /* libc++.tbd in Frameworks */,
 				EA372FF11C4650CB00E602D4 /* libsqlite3.tbd in Frameworks */,
 				EA372FEF1C4650B600E602D4 /* libz.tbd in Frameworks */,
-				EA372FED1C4650A600E602D4 /* CoreGraphics.framework in Frameworks */,
 				EA372FEB1C46509C00E602D4 /* Foundation.framework in Frameworks */,
 				EA372FE91C46509600E602D4 /* UIKit.framework in Frameworks */,
 				EA372FE71C46508800E602D4 /* CoreText.framework in Frameworks */,
 				EA372FE51C46507F00E602D4 /* CoreTelephony.framework in Frameworks */,
-				EA372FE31C46507600E602D4 /* Security.framework in Frameworks */,
 				EA372FE11C46506A00E602D4 /* SystemConfiguration.framework in Frameworks */,
 				EA372FDF1C46505800E602D4 /* ImageIO.framework in Frameworks */,
 				EA372FDD1C46504D00E602D4 /* QuartzCore.framework in Frameworks */,
 				EA372FCC1C462BD200E602D4 /* MessageUI.framework in Frameworks */,
+				EA1E28C31C48E91100893D5C /* BmobSDK.framework in Frameworks */,
 				EA372FDA1C464F9500E602D4 /* libWeiboSDK.a in Frameworks */,
 				D79ECE3F61CAE0DCD6B27B42 /* libPods.a in Frameworks */,
+				EA0954341C47DAEF00E08B31 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +267,15 @@
 		0046B1DE4855A7CC871C4B72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA1E28D01C48E9EB00893D5C /* MediaPlayer.framework */,
+				EA1E28CE1C48E9DD00893D5C /* AVFoundation.framework */,
+				EA1E28CC1C48E9CA00893D5C /* libicucore.tbd */,
+				EA1E28CA1C48E9B900893D5C /* libz.1.2.5.tbd */,
+				EA1E28C81C48E9A500893D5C /* CFNetwork.framework */,
+				EA1E28C61C48E99A00893D5C /* MobileCoreServices.framework */,
+				EA1E28C41C48E96800893D5C /* CoreLocation.framework */,
+				EA1E28C21C48E91100893D5C /* BmobSDK.framework */,
+				EA0954351C47DBF200E08B31 /* libc++.tbd */,
 				EA372FF01C4650CB00E602D4 /* libsqlite3.tbd */,
 				EA372FEE1C4650B600E602D4 /* libz.tbd */,
 				EA372FEC1C4650A600E602D4 /* CoreGraphics.framework */,
@@ -254,6 +300,50 @@
 				55ED2CD6D3821FA44030050D /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA0954301C47DAEF00E08B31 /* WeiXinSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EA0954311C47DAEF00E08B31 /* libWeChatSDK.a */,
+				EA0954321C47DAEF00E08B31 /* WXApi.h */,
+				EA0954331C47DAEF00E08B31 /* WXApiObject.h */,
+			);
+			path = WeiXinSDK;
+			sourceTree = "<group>";
+		};
+		EA1E28D21C48ECF800893D5C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E28D31C48ECF800893D5C /* Controllers */,
+				EA1E28D41C48ECF800893D5C /* Models */,
+				EA1E28D51C48ECF800893D5C /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EA1E28D31C48ECF800893D5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E28D81C48ED1B00893D5C /* LoginViewController.h */,
+				EA1E28D91C48ED1B00893D5C /* LoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EA1E28D41C48ECF800893D5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA1E28D51C48ECF800893D5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E28D61C48ED0800893D5C /* Login.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EA27C90C1C3CADEC00895FC8 /* HWTools */ = {
@@ -375,6 +465,7 @@
 		EAB688481C3A4E2A00E33E17 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA1E28D21C48ECF800893D5C /* Login */,
 				EAB6884F1C3A4E2A00E33E17 /* Main */,
 				EAB688491C3A4E2A00E33E17 /* Discover */,
 				EAB688551C3A4E2A00E33E17 /* Mine */,
@@ -536,6 +627,7 @@
 		EAB6885E1C3A4E3400E33E17 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				EA0954301C47DAEF00E08B31 /* WeiXinSDK */,
 				EA372FCD1C464F9500E602D4 /* libWeiboSDK */,
 				EA3B58531C449EF7003D03C6 /* ProgressHUD */,
 				EA49360E1C43912800D400ED /* VOSegmentedControl */,
@@ -621,6 +713,7 @@
 				EA91C72B1C3FB7660040E1A3 /* GoodActivity.plist in Resources */,
 				EA91C7191C3F5D3D0040E1A3 /* ActivityTheme.plist in Resources */,
 				EA4936221C43A72300D400ED /* typeud21.plist in Resources */,
+				EA1E28D71C48ED0800893D5C /* Login.storyboard in Resources */,
 				EA49361E1C43A5FC00D400ED /* typeid23.plist in Resources */,
 				EA49361C1C43A58400D400ED /* typeid6.plist in Resources */,
 				EA3B58901C4511C3003D03C6 /* Discover.plist in Resources */,
@@ -719,6 +812,7 @@
 				EA520EFE1C4737D100CB1FF4 /* ShareView.m in Sources */,
 				EA49360B1C43512300D400ED /* HotActivityModel.m in Sources */,
 				EA27C91A1C3CBF3B00895FC8 /* ThemeViewController.m in Sources */,
+				EA1E28DA1C48ED1B00893D5C /* LoginViewController.m in Sources */,
 				EA91C7241C3F9DF80040E1A3 /* PullingRefreshTableView.m in Sources */,
 				EA3B58581C449EF7003D03C6 /* ProgressHUD.m in Sources */,
 				EAEAA2151C3E10D5002BE420 /* ActivityDetailView.m in Sources */,
@@ -762,7 +856,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -784,6 +879,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -805,7 +901,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -820,6 +917,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -832,16 +930,29 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HappyWeekend/Library/HWTools/HappyWeekend.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"${PODS_ROOT}/HappyWeekend/Library/WeiXinSDK",
+				);
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HappyWeekend/Library/libWeiboSDK",
+					"$(PROJECT_DIR)/HappyWeekend/Library/WeiXinSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MangoiOS.HappyWeekend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZMangoiOS.HappyWeekend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -854,16 +965,30 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HappyWeekend/Library/HWTools/HappyWeekend.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"${PODS_ROOT}/HappyWeekend/Library/WeiXinSDK",
+				);
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HappyWeekend/Library/libWeiboSDK",
+					"$(PROJECT_DIR)/HappyWeekend/Library/WeiXinSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MangoiOS.HappyWeekend;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZMangoiOS.HappyWeekend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

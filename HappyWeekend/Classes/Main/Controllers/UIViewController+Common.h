@@ -10,7 +10,7 @@
 
 @interface UIViewController (Common)
 
-- (void)showBarkButton;
+- (void)showBackButtonWithImage:(NSString *)imageName;
 - (void)showRightButtonWithTitle:(NSString *)title;
 
 

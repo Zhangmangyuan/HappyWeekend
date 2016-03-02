@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
     self.title = @"热门专题";
     [self.view addSubview:self.tableView];
     [self.tableView launchRefreshing];

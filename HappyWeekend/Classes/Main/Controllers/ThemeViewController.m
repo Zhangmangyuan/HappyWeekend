@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
 //    //隐藏tabbar
 //    self.tabBarController.tabBar.hidden = YES;
 

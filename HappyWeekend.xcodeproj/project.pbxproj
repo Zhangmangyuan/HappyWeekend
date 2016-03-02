@@ -86,6 +86,11 @@
 		EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB688641C3A507D00E33E17 /* Mine.storyboard */; };
 		EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB688671C3A766900E33E17 /* MainTableViewCell.m */; };
 		EAB6886A1C3A766900E33E17 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB688681C3A766900E33E17 /* MainTableViewCell.xib */; };
+		EABD65271C85847700D0546D /* HeadrCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD65261C85847700D0546D /* HeadrCollectionView.m */; };
+		EABD652A1C85884B00D0546D /* FooterCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD65291C85884B00D0546D /* FooterCollectionView.m */; };
+		EABD652C1C8593F300D0546D /* HeadrCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABD652B1C8593F300D0546D /* HeadrCollectionView.xib */; };
+		EABD652E1C859D9D00D0546D /* CityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABD652D1C859D9D00D0546D /* CityList.plist */; };
+		EABD65311C85E63200D0546D /* CityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD65301C85E63200D0546D /* CityCollectionViewCell.m */; };
 		EAD0A7381C3E4C2600E28F10 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD0A7371C3E4C2600E28F10 /* HWTools.m */; };
 		EAD0A73B1C3E5B0200E28F10 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD0A73A1C3E5B0200E28F10 /* UIView+Extension.m */; };
 		EAD6B8CD1C3BA05A0084C6D7 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD6B8CC1C3BA05A0084C6D7 /* MainModel.m */; };
@@ -219,6 +224,14 @@
 		EAB688661C3A766900E33E17 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		EAB688671C3A766900E33E17 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		EAB688681C3A766900E33E17 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		EABD65251C85847700D0546D /* HeadrCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadrCollectionView.h; sourceTree = "<group>"; };
+		EABD65261C85847700D0546D /* HeadrCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadrCollectionView.m; sourceTree = "<group>"; };
+		EABD65281C85884B00D0546D /* FooterCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FooterCollectionView.h; path = ../Controllers/FooterCollectionView.h; sourceTree = "<group>"; };
+		EABD65291C85884B00D0546D /* FooterCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FooterCollectionView.m; path = ../Controllers/FooterCollectionView.m; sourceTree = "<group>"; };
+		EABD652B1C8593F300D0546D /* HeadrCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadrCollectionView.xib; sourceTree = "<group>"; };
+		EABD652D1C859D9D00D0546D /* CityList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityList.plist; sourceTree = "<group>"; };
+		EABD652F1C85E63200D0546D /* CityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCollectionViewCell.h; sourceTree = "<group>"; };
+		EABD65301C85E63200D0546D /* CityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCollectionViewCell.m; sourceTree = "<group>"; };
 		EAD0A7361C3E4C2600E28F10 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
 		EAD0A7371C3E4C2600E28F10 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTools.m; sourceTree = "<group>"; };
 		EAD0A7391C3E5B0200E28F10 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -566,6 +579,7 @@
 				EA49361D1C43A5FC00D400ED /* typeid23.plist */,
 				EA49361F1C43A65900D400ED /* typeid22.plist */,
 				EA4936211C43A72300D400ED /* typeud21.plist */,
+				EABD652D1C859D9D00D0546D /* CityList.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -586,6 +600,13 @@
 				EA91C7271C3FA3AD0040E1A3 /* GoodActivityTableViewCell.xib */,
 				EA4936061C434F5600D400ED /* HotActivityTableViewCell.h */,
 				EA4936071C434F5600D400ED /* HotActivityTableViewCell.m */,
+				EABD65251C85847700D0546D /* HeadrCollectionView.h */,
+				EABD65261C85847700D0546D /* HeadrCollectionView.m */,
+				EABD652B1C8593F300D0546D /* HeadrCollectionView.xib */,
+				EABD65281C85884B00D0546D /* FooterCollectionView.h */,
+				EABD65291C85884B00D0546D /* FooterCollectionView.m */,
+				EABD652F1C85E63200D0546D /* CityCollectionViewCell.h */,
+				EABD65301C85E63200D0546D /* CityCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -711,6 +732,7 @@
 				EAB688611C3A505C00E33E17 /* Main.storyboard in Resources */,
 				EA49360D1C43589300D400ED /* HotActivity.plist in Resources */,
 				EA91C72B1C3FB7660040E1A3 /* GoodActivity.plist in Resources */,
+				EABD652E1C859D9D00D0546D /* CityList.plist in Resources */,
 				EA91C7191C3F5D3D0040E1A3 /* ActivityTheme.plist in Resources */,
 				EA4936221C43A72300D400ED /* typeud21.plist in Resources */,
 				EA1E28D71C48ED0800893D5C /* Login.storyboard in Resources */,
@@ -726,6 +748,7 @@
 				EA91C72D1C3FB7C80040E1A3 /* GoodActivity2.plist in Resources */,
 				EAB688351C3A1C3B00E33E17 /* Assets.xcassets in Resources */,
 				EA91C7221C3F9DF80040E1A3 /* blueArrow.png in Resources */,
+				EABD652C1C8593F300D0546D /* HeadrCollectionView.xib in Resources */,
 				EA4936201C43A65900D400ED /* typeid22.plist in Resources */,
 				EA91C7151C3F55950040E1A3 /* ActivityDetail.plist in Resources */,
 				EAB688381C3A1C3B00E33E17 /* LaunchScreen.storyboard in Resources */,
@@ -792,14 +815,17 @@
 				EA4936181C43912900D400ED /* VOIndicatorAnimation.m in Sources */,
 				EAD0A7381C3E4C2600E28F10 /* HWTools.m in Sources */,
 				EA4936171C43912900D400ED /* VOContentLayer.m in Sources */,
+				EABD65311C85E63200D0546D /* CityCollectionViewCell.m in Sources */,
 				EA27C91D1C3CBFE100895FC8 /* ClassifyViewController.m in Sources */,
 				EA4936191C43912900D400ED /* VOSegment.m in Sources */,
 				EA3B585C1C44FA62003D03C6 /* DiscoverTableViewCell.m in Sources */,
+				EABD652A1C85884B00D0546D /* FooterCollectionView.m in Sources */,
 				EA27C9231C3CC06400895FC8 /* HotActivityViewController.m in Sources */,
 				EAB688691C3A766900E33E17 /* MainTableViewCell.m in Sources */,
 				EA4936081C434F5600D400ED /* HotActivityTableViewCell.m in Sources */,
 				EA27C9201C3CC05800895FC8 /* GoodActivityViewController.m in Sources */,
 				EAB688331C3A1C3B00E33E17 /* AppDelegate.m in Sources */,
+				EABD65271C85847700D0546D /* HeadrCollectionView.m in Sources */,
 				EAB6885B1C3A4E2A00E33E17 /* DiscoverViewController.m in Sources */,
 				EA520F011C474DBA00CB1FF4 /* ShareViewController.m in Sources */,
 				EAB6885D1C3A4E2A00E33E17 /* MineViewController.m in Sources */,

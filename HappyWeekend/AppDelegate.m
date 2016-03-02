@@ -187,7 +187,7 @@
     
     [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark *placeMark = [placemarks firstObject];
-        NSString *city = placeMark.addressDictionary[@"City"];
+//        NSString *city = placeMark.addressDictionary[@"City"];
         NSLog(@"%@", placeMark.addressDictionary);
     }];
     //如果不需要使用定位服务的时候，及时关闭定位服务

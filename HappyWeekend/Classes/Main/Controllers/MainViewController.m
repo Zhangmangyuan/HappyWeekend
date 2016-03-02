@@ -53,7 +53,16 @@
     self.navigationController.navigationBar.barTintColor = MainColor;
 
     //left
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 60, 44);
+    [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"btn_chengshi"] forState:UIControlStateNormal];
+    //调整btn图片的位置，距离btn顶部、左边、下边、右边边界的距离
+    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, leftBtn.frame.size.width - 25, 0, 0)];
+    //调整btn标题所在的位置，距离btn顶部、左边、下边、右边边界的距离
+    [leftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -30, 0,10)];
+    [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     leftBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
     

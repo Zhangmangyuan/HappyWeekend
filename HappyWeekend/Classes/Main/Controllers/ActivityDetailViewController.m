@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"活动详情";
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
 //    //隐藏tabbar
 //    self.tabBarController.tabBar.hidden = YES;
     //去地图页面

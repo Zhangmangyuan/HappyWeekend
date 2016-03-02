@@ -36,7 +36,12 @@ typedef NS_ENUM(NSInteger, ClassifyListType) {
 //分类列表接口
 #define kClassifyList @"http://e.kumi.cn/app/v1.3/catelist.php?_s_=dad924a9b9cd534b53fc2c521e9f8e84&_t_=1452495193&channelid=appstore&cityid=1&lat=34.61356398594803&limit=30&lng=112.4140434532402"
 
+//发现接口
 #define kDiscover @"http://e.kumi.cn/app/found.php?_s_=a82c7d49216aedb18c04a20fd9b0d5b2&_t_=1451310230&channelid=appstore&cityid=1&lat=34.62172291944134&lng=112.4149512442411"
+
+//选择城市接口
+#define KSelectCity @"http://e.kumi.cn/app/citylist.php"
+//?_s_=7afdcf70cf8f62146f2387946b4bf4e0&_t_=1456798700&channelid=appstore&cityid=1316&lat=34.61346589895142&lng=112.4140820306375
 
 //新浪微博分享
 #define kAppKey    @"4249192859"

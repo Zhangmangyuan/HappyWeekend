@@ -11,10 +11,20 @@
 @implementation UIViewController (Common)
 
 //导航栏添加返回按钮
-- (void)showBarkButton {
+- (void)showBackButtonWithImage:(NSString *)imageName {
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 44, 44);
-    [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
+    [backBtn addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = leftBarBtn;
+}
+
+- (void)showCancleButton {
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 44, 44);
+    [backBtn setImage:[UIImage imageNamed:@"camera_cancel_up"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = leftBarBtn;

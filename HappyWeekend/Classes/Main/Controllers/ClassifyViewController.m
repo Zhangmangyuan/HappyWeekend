@@ -37,7 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"分类列表";
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
     [self.view addSubview:self.segementControl];
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"GoodActivityTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];

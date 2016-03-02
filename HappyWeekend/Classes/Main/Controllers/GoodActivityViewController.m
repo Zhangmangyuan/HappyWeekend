@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"精选活动";
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
     
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"GoodActivityTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];

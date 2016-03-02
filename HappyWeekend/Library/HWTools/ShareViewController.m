@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self showBarkButton];
+    [self showBackButtonWithImage:@"back"];
     [self showRightButtonWithTitle:@"发送"];
     self.navigationController.navigationBar.barTintColor = MainColor;
 }

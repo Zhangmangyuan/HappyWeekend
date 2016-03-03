@@ -8,6 +8,7 @@
 
 #import "MainTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <CoreLocation/CLLocation.h>
 
 @interface MainTableViewCell ()
 
@@ -32,6 +33,14 @@
     [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.image_big]  placeholderImage:nil];
     self.activityNameLabel.text = mainModel.title;
     self.activityPriceLabel.text = mainModel.price;
+    
+    //计算两个经纬度之间的距离
+    double origLat = [[[NSUserDefaults standardUserDefaults] valueForKey:@"lat"] doubleValue];
+    double origLng = [[[NSUserDefaults standardUserDefaults] valueForKey:@"lng"] doubleValue];
+    CLLocation *origLoc = [[CLLocation alloc] initWithLatitude:origLat longitude:origLng];
+    CLLocation *disLoc = [[CLLocation alloc] initWithLatitude:mainModel.lat longitude:mainModel.lng];
+    CLLocationDistance distance = [origLoc distanceFromLocation:disLoc]/1000;
+    [self.activityDistanceBtn setTitle:[NSString stringWithFormat:@"%.2fkm",distance] forState:UIControlStateNormal];
     
     if ([mainModel.type integerValue] != RecommendTypeActivity) {
         self.activityDistanceBtn.hidden = YES;

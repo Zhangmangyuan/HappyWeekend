@@ -53,6 +53,10 @@
             </subviews>
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="locationCityLabel" destination="SIs-Rf-1dI" id="MgY-sn-CM7"/>
+                <outlet property="reLocationBtn" destination="Pve-qk-jLD" id="i6J-nc-V92"/>
+            </connections>
             <point key="canvasLocation" x="588.5" y="440.5"/>
         </view>
     </objects>

@@ -29,6 +29,8 @@
 		EA27C9201C3CC05800895FC8 /* GoodActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C91F1C3CC05800895FC8 /* GoodActivityViewController.m */; };
 		EA27C9231C3CC06400895FC8 /* HotActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9221C3CC06400895FC8 /* HotActivityViewController.m */; };
 		EA27C9261C3D201500895FC8 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA27C9251C3D201500895FC8 /* UIViewController+Common.m */; };
+		EA369B9A1C8681F80011E413 /* File in Resources */ = {isa = PBXBuildFile; fileRef = EA369B991C8681F80011E413 /* File */; };
+		EA369B9D1C86F22F0011E413 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA369B9C1C86F22F0011E413 /* RegisterViewController.m */; };
 		EA372FCC1C462BD200E602D4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA372FCB1C462BD200E602D4 /* MessageUI.framework */; };
 		EA372FDA1C464F9500E602D4 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA372FCE1C464F9500E602D4 /* libWeiboSDK.a */; };
 		EA372FDB1C464F9500E602D4 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA372FD71C464F9500E602D4 /* WeiboSDK.bundle */; };
@@ -135,6 +137,9 @@
 		EA27C9221C3CC06400895FC8 /* HotActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityViewController.m; sourceTree = "<group>"; };
 		EA27C9241C3D201500895FC8 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Common.h"; path = "../../Classes/Main/Controllers/UIViewController+Common.h"; sourceTree = "<group>"; };
 		EA27C9251C3D201500895FC8 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Common.m"; path = "../../Classes/Main/Controllers/UIViewController+Common.m"; sourceTree = "<group>"; };
+		EA369B991C8681F80011E413 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = File; path = ../Controllers/File; sourceTree = "<group>"; };
+		EA369B9B1C86F22F0011E413 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		EA369B9C1C86F22F0011E413 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		EA372FCB1C462BD200E602D4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EA372FCE1C464F9500E602D4 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		EA372FCF1C464F9500E602D4 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
@@ -340,6 +345,8 @@
 			children = (
 				EA1E28D81C48ED1B00893D5C /* LoginViewController.h */,
 				EA1E28D91C48ED1B00893D5C /* LoginViewController.m */,
+				EA369B9B1C86F22F0011E413 /* RegisterViewController.h */,
+				EA369B9C1C86F22F0011E413 /* RegisterViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -562,6 +569,7 @@
 		EAB688531C3A4E2A00E33E17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA369B991C8681F80011E413 /* File */,
 				EA07CDF11C42A49300E3057C /* Geocoder.plist */,
 				EA91C7161C3F57D60040E1A3 /* MainList.plist */,
 				EAD6B8CB1C3BA05A0084C6D7 /* MainModel.h */,
@@ -742,6 +750,7 @@
 				EA91C7231C3F9DF80040E1A3 /* blueArrowDown.png in Resources */,
 				EA07CDF21C42A49300E3057C /* Geocoder.plist in Resources */,
 				EA3B585D1C44FA62003D03C6 /* DiscoverTableViewCell.xib in Resources */,
+				EA369B9A1C8681F80011E413 /* File in Resources */,
 				EAB688631C3A506A00E33E17 /* Discover.storyboard in Resources */,
 				EAB688651C3A507D00E33E17 /* Mine.storyboard in Resources */,
 				EA91C7291C3FA3AD0040E1A3 /* GoodActivityTableViewCell.xib in Resources */,
@@ -838,6 +847,7 @@
 				EA520EFE1C4737D100CB1FF4 /* ShareView.m in Sources */,
 				EA49360B1C43512300D400ED /* HotActivityModel.m in Sources */,
 				EA27C91A1C3CBF3B00895FC8 /* ThemeViewController.m in Sources */,
+				EA369B9D1C86F22F0011E413 /* RegisterViewController.m in Sources */,
 				EA1E28DA1C48ED1B00893D5C /* LoginViewController.m in Sources */,
 				EA91C7241C3F9DF80040E1A3 /* PullingRefreshTableView.m in Sources */,
 				EA3B58581C449EF7003D03C6 /* ProgressHUD.m in Sources */,

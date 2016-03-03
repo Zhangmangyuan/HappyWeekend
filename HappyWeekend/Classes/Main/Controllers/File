@@ -1,0 +1,17 @@
+iOS中常见的传值方式：
+1、属性传值
+
+2、代理
+
+3、block
+
+4、单例
+
+5、NSNotification通知传值
+
+6、KVO、KVC
+
+
+7、指针传值
+
+8、NSUserDefault、数据库

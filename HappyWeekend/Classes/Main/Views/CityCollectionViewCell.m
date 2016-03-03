@@ -22,7 +22,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    ZMYLog(@"2313");
 }
 
 - (void)configView {

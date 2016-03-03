@@ -19,7 +19,9 @@
 #import "GoodActivityViewController.h"
 #import "HotActivityViewController.h"
 
-@interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,SelectCityDelegate>{
+    NSString *cityNameId;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //全部列表数组
@@ -41,6 +43,7 @@
 
 @property (nonatomic, strong) UIButton *themeBtn;
 
+@property (nonatomic, strong) UIButton *leftBtn;
 
 @end
 
@@ -51,28 +54,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = MainColor;
-
+    cityNameId = @"1";
     //left
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 60, 44);
-    [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
-    [leftBtn setImage:[UIImage imageNamed:@"btn_chengshi"] forState:UIControlStateNormal];
+    self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.leftBtn.frame = CGRectMake(0, 0, 60, 44);
+    [self.leftBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [self.leftBtn setImage:[UIImage imageNamed:@"btn_chengshi"] forState:UIControlStateNormal];
     //调整btn图片的位置，距离btn顶部、左边、下边、右边边界的距离
-    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, leftBtn.frame.size.width - 25, 0, 0)];
+    [self.leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, self.leftBtn.frame.size.width - 20, 0, 0)];
     //调整btn标题所在的位置，距离btn顶部、左边、下边、右边边界的距离
-    [leftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -30, 0,10)];
-    [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    [self.leftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -30, 0, 0)];
+    [self.leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:self.leftBtn];
     leftBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
     
     //right
+/*
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 14, 14);
     [rightBtn setImage:[UIImage imageNamed:@"btn_search"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(searchActivityAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarBtn;
+*/
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"MainTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -104,7 +109,10 @@
     MainTableViewCell *mainCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     NSMutableArray *array = self.listArray[indexPath.section];
-    mainCell.mainModel = array[indexPath.row];
+    //防止数组越界访问，row必须小于数组元素个数
+    if (indexPath.row < array.count) {
+        mainCell.mainModel = array[indexPath.row];
+    }
     
     return mainCell;
 }
@@ -160,10 +168,24 @@
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barButton {
     SelectCityViewController *selectCityVC = [[SelectCityViewController alloc] init];
+    selectCityVC.delegate = self;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:selectCityVC];
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
+#pragma mark --------  select City Delegate
+
+- (void)getCityName:(NSString *)cityName cityId:(NSString *)cityId {
+    cityNameId = cityId;
+    [self.leftBtn setTitle:cityName forState:UIControlStateNormal];
+    //如果城市名字大于两个字需要调整图片位置
+    NSInteger edge = - 20;
+    if (cityName.length > 2) {
+        edge = -10;
+    }
+    [self.leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, self.leftBtn.frame.size.width + edge, 0, 0)];
+    [self requestModel];
+}
 //搜索关键字
 - (void)searchActivityAction:(UIButton *)btn {
     SearchViewController *searchVC = [[SearchViewController alloc] init];
@@ -211,14 +233,22 @@
 - (void)requestModel {
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:kMainDataList parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSNumber *lat = [[NSUserDefaults standardUserDefaults] valueForKey:@"lat"];
+    NSNumber *lng = [[NSUserDefaults standardUserDefaults] valueForKey:@"lng"];
+    [sessionManager GET:[NSString stringWithFormat:@"%@&cityid=%@&lat=%@&lng=%@", kMainDataList, cityNameId, lat, lng] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *resultDic = responseObject;
         NSString *status = resultDic[@"status"];
         NSInteger code = [resultDic[@"code"] integerValue];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dic = resultDic[@"success"];
+            
+            
             //推荐活动
+            //切换城市之后需要移除数组中原来的数据
+            if (self.activityArray.count > 0) {
+                [self.activityArray removeAllObjects];
+            }
             NSArray *acDataArray = dic[@"acData"];
             for (NSDictionary *dict in acDataArray) {
                 MainModel *model = [[MainModel alloc] initWithDictionary:dict];
@@ -226,6 +256,9 @@
             }
             [self.listArray addObject:self.activityArray];
             //推荐专题
+            if (self.themeArray.count > 0) {
+                [self.themeArray removeAllObjects];
+            }
             NSArray *rcDataArray = dic[@"rcData"];
             for (NSDictionary *dict in rcDataArray) {
                 MainModel *model = [[MainModel alloc] initWithDictionary:dict];
@@ -235,6 +268,9 @@
             //刷新tableView数据
             [self.tableView reloadData];
             //广告
+            if (self.adArray.count > 0) {
+                [self.adArray removeAllObjects];
+            }
             NSArray *adDataArray = dic[@"adData"];
             for (NSDictionary *dic in adDataArray) {
                 NSDictionary *dict = @{@"url" : dic[@"url"], @"type" : dic[@"type"], @"id" : dic[@"id"]};

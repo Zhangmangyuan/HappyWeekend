@@ -12,12 +12,17 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "ProgressHUD.h"
 #import "CityCollectionViewCell.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 static NSString *itemIdentifier = @"itemIdentifier";
 static NSString *headIdentifier = @"headIdentifier";
 static NSString *footIdentifier = @"footIdentifier";
 
-@interface SelectCityViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface SelectCityViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CLLocationManagerDelegate>{
+    CLLocationManager *_locationManager;
+    CLGeocoder *_geocoder;
+}
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *cityListArray;
@@ -36,6 +41,11 @@ static NSString *footIdentifier = @"footIdentifier";
     [self loadData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [ProgressHUD dismiss];
+}
+
 #pragma mark -----  UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -48,13 +58,19 @@ static NSString *footIdentifier = @"footIdentifier";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CityCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-    cell.textLabel.text = self.cityListArray[indexPath.row];
+    cell.textLabel.text = self.cityListArray[indexPath.row][@"cat_name"];
     return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (kind == UICollectionElementKindSectionHeader) {
         HeadrCollectionView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headIdentifier forIndexPath:indexPath];
+        //定位城市标签
+        NSString *city = [[NSUserDefaults standardUserDefaults] valueForKey:@"city"];
+        headView.locationCityLabel.text = [city substringToIndex:city.length - 1];
+        //重新定位
+        [headView.reLocationBtn addTarget:self action:@selector(reLocationAction:) forControlEvents:UIControlEventTouchUpInside];
+        
         return headView;
     }
     FooterCollectionView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footIdentifier forIndexPath:indexPath];
@@ -62,8 +78,14 @@ static NSString *footIdentifier = @"footIdentifier";
     return footView;
 }
 
+#pragma mark -----  UICollectionViewDelegate
 
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getCityName:cityId:)]) {
+        [self.delegate getCityName:self.cityListArray[indexPath.row][@"cat_name"] cityId:self.cityListArray[indexPath.row][@"cat_id"]];
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark -----  Custom Method
 
@@ -86,7 +108,7 @@ static NSString *footIdentifier = @"footIdentifier";
             NSDictionary *successDic = dic[@"success"];
             NSArray *listArray = successDic[@"list"];
             for (NSDictionary *dict in listArray) {
-                [self.cityListArray addObject:dict[@"cat_name"]];
+                [self.cityListArray addObject:dict];
             }
             [self.collectionView reloadData];
         }
@@ -95,6 +117,48 @@ static NSString *footIdentifier = @"footIdentifier";
         NSLog(@"%@",error);
     }];
 }
+
+- (void)reLocationAction:(UIButton *)btn {
+    [ProgressHUD show:@"定位中..."];
+    _locationManager = [[CLLocationManager alloc] init];
+    //设置代理
+    _locationManager.delegate = self;
+    //定位精度
+    _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    //多少米定位一次
+    CLLocationDistance distance = 10.0;
+    _locationManager.distanceFilter = distance;
+    //开始定位
+    [_locationManager startUpdatingLocation];
+    
+    _geocoder = [[CLGeocoder alloc] init];
+}
+
+#pragma mark ------  LocationDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    //从数组中取出一个定位的信息
+    CLLocation *location = [locations lastObject];
+    //从CLLoction中取出坐标
+    //CLLocationCoordinate2D 坐标系，里边包含经度和纬度
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setValue:[NSNumber numberWithDouble:coordinate.latitude] forKey:@"lat"];
+    [userDefault setValue:[NSNumber numberWithDouble:coordinate.longitude] forKey:@"lng"];
+    
+    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        CLPlacemark *placeMark = [placemarks firstObject];
+        [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
+        //保存
+        [userDefault synchronize];
+        [ProgressHUD showSuccess:@"定位成功"];
+        [self.collectionView reloadData];
+    }];
+    //如果不需要使用定位服务的时候，及时关闭定位服务
+    [_locationManager stopUpdatingLocation];
+}
+
+
 
 #pragma mark ------  Lazy Loading
 
@@ -117,7 +181,7 @@ static NSString *footIdentifier = @"footIdentifier";
         layout.itemSize = CGSizeMake(kScreenWidth/3 - 5, kScreenWidth/9);
         //通过一个layout布局来创建一个collectionView
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
-        self.collectionView.backgroundColor = [UIColor clearColor];
+        self.collectionView.backgroundColor = [UIColor whiteColor];
         //设置代理
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;

@@ -43,7 +43,9 @@
     //4.如果没有授权则请求用户授权
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         [_locationManager requestWhenInUseAuthorization];
-    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+    }
+    
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
         //设置代理
         _locationManager.delegate = self;
         //设置定位精度,定位精度越高越耗电
@@ -177,21 +179,23 @@
  *  @since 1.0
  */
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    ZMYLog(@"%@", locations);
     //从数组中取出一个定位的信息
     CLLocation *location = [locations lastObject];
     //从CLLoction中取出坐标
     //CLLocationCoordinate2D 坐标系，里边包含经度和纬度
     CLLocationCoordinate2D coordinate = location.coordinate;
-    ZMYLog(@"维度：%f 经度：%f 海拔：%f 航向：%f 行走速度:%f", coordinate.latitude, coordinate.longitude, location.altitude, location.course, location.speed);
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setValue:[NSNumber numberWithDouble:coordinate.latitude] forKey:@"lat"];
+    [userDefault setValue:[NSNumber numberWithDouble:coordinate.longitude] forKey:@"lng"];
+    
     
     [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark *placeMark = [placemarks firstObject];
-//        NSString *city = placeMark.addressDictionary[@"City"];
-        NSLog(@"%@", placeMark.addressDictionary);
+        [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
+        //保存
+        [userDefault synchronize];
     }];
     //如果不需要使用定位服务的时候，及时关闭定位服务
-    ZMYLog(@"%@ %@", _locationManager, manager);
     [_locationManager stopUpdatingLocation];
 }
 

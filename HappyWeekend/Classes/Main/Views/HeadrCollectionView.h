@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HeadrCollectionView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *locationCityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *reLocationBtn;
 
 @end

@@ -34,6 +34,11 @@
     [self.tableView launchRefreshing];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [ProgressHUD dismiss];
+}
+
 #pragma mark ------------  UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.likeArray.count;
